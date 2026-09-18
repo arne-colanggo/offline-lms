@@ -14,10 +14,19 @@ class DefaultUserSeeder extends Seeder
             'password' => password_hash('1245', PASSWORD_BCRYPT),
             'email' => 'admin@localhost',
             'role' => 'admin',
-            'status' => 1
+            'status' => 1,
+            'profile_id' => 1
         ];
 
-        $this->db->query('INSERT INTO users(username,`password`,email,`role`,`status`) VALUES(:username:, :password:, :email:, :role:, :status:)', $data);
+        $data_profile = [
+            'firstname' => 'Jon Paul',
+            'middlename' => 'Mananagna',
+            'lastname' => 'Kho',
+            'gender' => 'M'
+        ];
+
+        $this->db->query('INSERT INTO profiles(firstname,middlename,lastname,gender) VALUES(:firstname:,:middlename:,:lastname:,:gender:);', $data_profile);
+        $this->db->query('INSERT INTO users(username,`password`,email,`role`,`status`,profile_id) VALUES(:username:, :password:, :email:, :role:, :status:,:profile_id:)', $data);
     }
 
 }

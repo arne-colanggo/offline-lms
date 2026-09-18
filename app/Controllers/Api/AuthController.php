@@ -4,6 +4,7 @@ namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
 use App\Models\UsersModel;
+use App\Models\ProfileModel;
 use App\Libraries\JWTService;
 
 class AuthController extends BaseController
@@ -67,6 +68,7 @@ class AuthController extends BaseController
 
         $token = $this->jwtService->generate($user);
 
+
         return $this->response
             ->setStatusCode(200)
             ->setJSON([
@@ -85,7 +87,8 @@ class AuthController extends BaseController
                         'id' => $user['id'],
                         'username' => $user['username'],
                         'email' => $user['email'],
-                        'role' => $user['role']
+                        'role' => $user['role'],
+
                     ]
                 ]
             ]);
@@ -95,7 +98,8 @@ class AuthController extends BaseController
     public function profile()
     {
         $user = $this->request->user;
-
+        $user_profile = new ProfileModel();
+        $profile_data = $user_profile->asObject()->where('id', $user->id)->first();
         return $this->response->setJSON([
             'success' => true,
             'message' => 'Authenticated user',
@@ -104,6 +108,7 @@ class AuthController extends BaseController
                 'username' => $user->username,
                 'email' => $user->email,
                 'role' => $user->role,
+                'profile' => $profile_data
             ]
         ]);
     }

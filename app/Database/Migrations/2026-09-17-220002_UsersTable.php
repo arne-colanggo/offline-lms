@@ -44,6 +44,12 @@ class UsersTable extends Migration
                 'constraint' => 1,
                 'default' => 1
             ],
+            'profile_id' => [
+                'type' => 'INT',
+                'constraint' => 5,
+                'unsigned' => true,
+                'null' => false
+            ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
                 'null' => false,
@@ -55,7 +61,8 @@ class UsersTable extends Migration
             ]
         ]);
         $this->forge->addPrimaryKey('id');
-        $this->forge->createTable('users');
+        $this->forge->addForeignKey('profile_id', 'profiles', 'id');
+        $this->forge->createTable('users', true);
     }
 
     public function down()
