@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Libraries\AuthenticationServices;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -9,6 +10,7 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\JWTAuthFilter;
+use App\Filters\Authentication;
 
 
 class Filters extends BaseConfig
@@ -26,7 +28,8 @@ class Filters extends BaseConfig
         'honeypot' => Honeypot::class,
         'invalidchars' => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'jwt' => JWTAuthFilter::class
+        'jwt' => JWTAuthFilter::class,
+        'auth' => Authentication::class
     ];
 
     /**
@@ -40,6 +43,7 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
+
         ],
         'after' => [
             'toolbar',

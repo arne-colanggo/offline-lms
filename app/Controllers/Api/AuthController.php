@@ -5,19 +5,29 @@ namespace App\Controllers\Api;
 use App\Controllers\BaseController;
 use App\Models\UsersModel;
 use App\Models\ProfileModel;
-use App\Libraries\JWTService;
+use App\Models\RevokeTokensModel;
+use App\Libraries\AuthenticationServices;
 
 class AuthController extends BaseController
 {
     protected UsersModel $userModel;
-    protected JWTService $jwtService;
+    protected AuthenticationServices $AuthServices;
 
     public function __construct()
     {
         $this->userModel = new UsersModel();
-        $this->jwtService = new JWTService();
+        $this->AuthServices = new AuthenticationServices();
     }
 
+    public function unauthorized()
+    {
+        return $this->response
+            ->setStatusCode(401)
+            ->setJSON([
+                'success' => false,
+                'message' => 'Invalid Email or Password'
+            ]);
+    }
     public function login()
     {
         $data = $this->request->getJSON(true);
@@ -65,10 +75,7 @@ class AuthController extends BaseController
                     'message' => 'Invalid email or password',
                 ]);
         }
-
-        $token = $this->jwtService->generate($user);
-
-
+        $this->AuthServices::setAuthorized($user);
         return $this->response
             ->setStatusCode(200)
             ->setJSON([
@@ -76,22 +83,10 @@ class AuthController extends BaseController
                 'message' => 'Login successful',
 
                 'data' => [
-                    'token' => $token,
-                    'token_type' => 'Bearer',
-                    'expires_in' => (int) env(
-                        'JWT_EXPIRATION',
-                        3600
-                    ),
-
-                    'user' => [
-                        'id' => $user['id'],
-                        'username' => $user['username'],
-                        'email' => $user['email'],
-                        'role' => $user['role'],
-
-                    ]
+                    $user
                 ]
             ]);
+        //return redirect()->to('api/users');
     }
 
 
@@ -112,9 +107,88 @@ class AuthController extends BaseController
             ]
         ]);
     }
-    public function veriyHash()
+    public function logout()
     {
-        $hash = password_hash('1245', PASSWORD_BCRYPT);
-        return $this->response->setJSON(['password' => $hash, 'verify' => password_verify('1245', $hash)]);
+        $this->AuthServices::forget();
+        return $this->response
+            ->setStatusCode(200)
+            ->setJSON([
+                'success' => true,
+                'message' => 'Logout successful.'
+            ]);
+    }
+    public function logoutJWT()
+    {
+        $header = $this->request->getHeaderLine('Authorization');
+
+        if (!$header) {
+            return $this->response
+                ->setStatusCode(401)
+                ->setJSON([
+                    'success' => false,
+                    'message' => 'Authorization token is required.'
+                ]);
+        }
+
+        if (!preg_match('/Bearer\s+(\S+)/i', $header, $matches)) {
+            return $this->response
+                ->setStatusCode(401)
+                ->setJSON([
+                    'success' => false,
+                    'message' => 'Invalid authorization header.'
+                ]);
+        }
+
+        $token = $matches[1];
+
+        try {
+
+            $decoded = $this->jwtService->validate($token);
+
+            if (!isset($decoded->jti)) {
+                return $this->response
+                    ->setStatusCode(401)
+                    ->setJSON([
+                        'success' => false,
+                        'message' => 'Invalid token.'
+                    ]);
+            }
+
+            $revokedTokenModel = new RevokeTokensModel();
+
+            // Prevent duplicate revocation
+            $existing = $revokedTokenModel
+                ->where('jti', $decoded->jti)
+                ->first();
+
+            if (!$existing) {
+
+                $revokedTokenModel->insert([
+                    'jti' => $decoded->jti,
+                    'user_id' => $decoded->user->id,
+                    'expires_at' => date(
+                        'Y-m-d H:i:s',
+                        $decoded->exp
+                    ),
+                    'created_at' => date('Y-m-d H:i:s')
+                ]);
+            }
+
+            return $this->response
+                ->setStatusCode(200)
+                ->setJSON([
+                    'success' => true,
+                    'message' => 'Logout successful.'
+                ]);
+
+        } catch (\Throwable $e) {
+
+            return $this->response
+                ->setStatusCode(401)
+                ->setJSON([
+                    'success' => false,
+                    'message' => 'Invalid or expired token.'
+                ]);
+        }
     }
 }

@@ -14,15 +14,16 @@ $routes->group('api', function ($routes) {
     // PUBLIC ROUTES
     // =========================
     $routes->post('login', 'Api\AuthController::login');
-
+    $routes->get('unauthorized', 'Api\AuthController::unauthorized');
 
     // =========================
     // AUTHENTICATED ROUTES
     // =========================
-    $routes->group('', ['filter' => 'jwt'], function ($routes) {
+    $routes->group('', ['filter' => 'auth'], function ($routes) {
 
         $routes->get('profile', 'Api\AuthController::profile');
         $routes->post('logout', 'Api\AuthController::logout');
+
 
         // Users
         $routes->get('users', 'Api\UserController::index');

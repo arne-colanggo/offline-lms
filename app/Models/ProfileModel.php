@@ -22,6 +22,6 @@ class ProfileModel extends Model
         'picture',
         'deleted'
     ];
-
+    protected $useTimestamps = false;
 
 }

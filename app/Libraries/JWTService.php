@@ -39,7 +39,7 @@ class JWTService
             'iss' => base_url(),
             'iat' => $issuedAt,
             'exp' => $expire,
-
+            'jti' => bin2hex(random_bytes(16)),
             'sub' => (string) $user['id'],
 
             'user' => [
