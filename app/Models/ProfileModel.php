@@ -14,6 +14,7 @@ class ProfileModel extends Model
         'lastname',
         'gender',
         'dateofbirth',
+        'street',
         'addressid',
         'religion',
         'contact',

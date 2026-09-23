@@ -11,6 +11,7 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
+        "almasaeed2010/adminlte": "4.0.0",
         "codeigniter4/framework": "^4.0",
         "firebase/php-jwt": "^6.10"
     },

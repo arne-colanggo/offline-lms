@@ -1,0 +1,1634 @@
+ 1 	 Caloocan City 
+ 1 	 Las Piñas City 
+ 1 	 Makati City 
+ 1 	 Malabon City 
+ 1 	 Mandaluyong City 
+ 1 	 Manila 
+ 1 	 Marikina City 
+ 1 	 Muntinlupa City 
+ 1 	 Navotas City 
+ 1 	 Parañaque City 
+ 1 	 Pasay City 
+ 1 	 Pasig City 
+ 1 	 Pateros 
+ 1 	 Quezon City 
+ 1 	 San Juan City 
+ 1 	 Taguig City 
+ 1 	 Valenzuela City 
+ 2 	 Adams 
+ 2 	 Bacarra 
+ 2 	 Badoc 
+ 2 	 Bangui 
+ 2 	 Banna 
+ 2 	 Burgos 
+ 2 	 Carasi 
+ 2 	 City of Batac 
+ 2 	 City of Laoag (Capital) 
+ 2 	 Currimao 
+ 2 	 Dingras 
+ 2 	 Dumalneg 
+ 2 	 Marcos 
+ 2 	 Nueva Era 
+ 2 	 Pagudpud 
+ 2 	 Paoay 
+ 2 	 Pasuquin 
+ 2 	 Piddig 
+ 2 	 Pinili 
+ 2 	 San Nicolas 
+ 2 	 Sarrat 
+ 2 	 Solsona 
+ 2 	 Vintar 
+ 3 	 Alilem 
+ 3 	 Banayoyo 
+ 3 	 Bantay 
+ 3 	 Burgos 
+ 3 	 Cabugao 
+ 3 	 Caoayan 
+ 3 	 Cervantes 
+ 3 	 City of Candon 
+ 3 	 City of Vigan (Capital) 
+ 3 	 Galimuyod 
+ 3 	 Gregorio del Pilar 
+ 3 	 Lidlidda 
+ 3 	 Magsingal 
+ 3 	 Nagbukel 
+ 3 	 Narvacan 
+ 3 	 Quirino 
+ 3 	 Salcedo 
+ 3 	 San Emilio 
+ 3 	 San Esteban 
+ 3 	 San Ildefonso 
+ 3 	 San Juan 
+ 3 	 San Vicente 
+ 3 	 Santa 
+ 3 	 Santa Catalina 
+ 3 	 Santa Cruz 
+ 3 	 Santa Lucia 
+ 3 	 Santa Maria 
+ 3 	 Santiago 
+ 3 	 Santo Domingo 
+ 3 	 Sigay 
+ 3 	 Sinait 
+ 3 	 Sugpon 
+ 3 	 Suyo 
+ 3 	 Tagudin 
+ 4 	 Agoo 
+ 4 	 Aringay 
+ 4 	 Bacnotan 
+ 4 	 Bagulin 
+ 4 	 Balaoan 
+ 4 	 Bangar 
+ 4 	 Bauang 
+ 4 	 Burgos 
+ 4 	 Caba 
+ 4 	 City of San Fernando (Capital) 
+ 4 	 Luna 
+ 4 	 Naguilian 
+ 4 	 Pugo 
+ 4 	 Rosario 
+ 4 	 San Gabriel 
+ 4 	 San Juan 
+ 4 	 Santo Tomas 
+ 4 	 Santol 
+ 4 	 Sudipen 
+ 4 	 Tubao 
+ 5 	 Agno 
+ 5 	 Aguilar 
+ 5 	 Alcala 
+ 5 	 Anda 
+ 5 	 Asingan 
+ 5 	 Balungao 
+ 5 	 Bani 
+ 5 	 Basista 
+ 5 	 Bautista 
+ 5 	 Bayambang 
+ 5 	 Binalonan 
+ 5 	 Binmaley 
+ 5 	 Bolinao 
+ 5 	 Bugallon 
+ 5 	 Burgos 
+ 5 	 Calasiao 
+ 5 	 City of Alaminos 
+ 5 	 City of Dagupan 
+ 5 	 City of San Carlos 
+ 5 	 City of Urdaneta 
+ 5 	 Dasol 
+ 5 	 Infanta 
+ 5 	 Labrador 
+ 5 	 Laoac 
+ 5 	 Lingayen (Capital) 
+ 5 	 Mabini 
+ 5 	 Malasiqui 
+ 5 	 Manaoag 
+ 5 	 Mangaldan 
+ 5 	 Mangatarem 
+ 5 	 Mapandan 
+ 5 	 Natividad 
+ 5 	 Pozorrubio 
+ 5 	 Rosales 
+ 5 	 San Fabian 
+ 5 	 San Jacinto 
+ 5 	 San Manuel 
+ 5 	 San Nicolas 
+ 5 	 San Quintin 
+ 5 	 Santa Barbara 
+ 5 	 Santa Maria 
+ 5 	 Santo Tomas 
+ 5 	 Sison 
+ 5 	 Sual 
+ 5 	 Tayug 
+ 5 	 Umingan 
+ 5 	 Urbiztondo 
+ 5 	 Villasis 
+ 6 	 Basco (Capital) 
+ 6 	 Itbayat 
+ 6 	 Ivana 
+ 6 	 Mahatao 
+ 6 	 Sabtang 
+ 6 	 Uyugan 
+ 7 	 Abulug 
+ 7 	 Alcala 
+ 7 	 Allacapan 
+ 7 	 Amulung 
+ 7 	 Aparri 
+ 7 	 Baggao 
+ 7 	 Ballesteros 
+ 7 	 Buguey 
+ 7 	 Calayan 
+ 7 	 Camalaniugan 
+ 7 	 Claveria 
+ 7 	 Enrile 
+ 7 	 Gattaran 
+ 7 	 Gonzaga 
+ 7 	 Iguig 
+ 7 	 Lal-Lo 
+ 7 	 Lasam 
+ 7 	 Pamplona 
+ 7 	 Peñablanca 
+ 7 	 Piat 
+ 7 	 Rizal 
+ 7 	 Sanchez-Mira 
+ 7 	 Santa Ana 
+ 7 	 Santa Praxedes 
+ 7 	 Santa Teresita 
+ 7 	 Santo Niño 
+ 7 	 Solana 
+ 7 	 Tuao 
+ 7 	 Tuguegarao City (Capital) 
+ 8 	 Alicia 
+ 8 	 Angadanan 
+ 8 	 Aurora 
+ 8 	 Benito Soliven 
+ 8 	 Burgos 
+ 8 	 Cabagan 
+ 8 	 Cabatuan 
+ 8 	 City of Cauayan 
+ 8 	 City of Ilagan (Capital) 
+ 8 	 City of Santiago 
+ 8 	 Cordon 
+ 8 	 Delfin Albano 
+ 8 	 Dinapigue 
+ 8 	 Divilacan 
+ 8 	 Echague 
+ 8 	 Gamu 
+ 8 	 Jones 
+ 8 	 Luna 
+ 8 	 Maconacon 
+ 8 	 Mallig 
+ 8 	 Naguilian 
+ 8 	 Palanan 
+ 8 	 Quezon 
+ 8 	 Quirino 
+ 8 	 Ramon 
+ 8 	 Reina Mercedes 
+ 8 	 Roxas 
+ 8 	 San Agustin 
+ 8 	 San Guillermo 
+ 8 	 San Isidro 
+ 8 	 San Manuel 
+ 8 	 San Mariano 
+ 8 	 San Mateo 
+ 8 	 San Pablo 
+ 8 	 Santa Maria 
+ 8 	 Santo Tomas 
+ 8 	 Tumauini 
+ 9 	 Alfonso Castaneda 
+ 9 	 Ambaguio 
+ 9 	 Aritao 
+ 9 	 Bagabag 
+ 9 	 Bambang 
+ 9 	 Bayombong (Capital) 
+ 9 	 Diadi 
+ 9 	 Dupax del Norte 
+ 9 	 Dupax del Sur 
+ 9 	 Kasibu 
+ 9 	 Kayapa 
+ 9 	 Quezon 
+ 9 	 Santa Fe 
+ 9 	 Solano 
+ 9 	 Villaverde 
+ 10 	 Aglipay 
+ 10 	 Cabarroguis (Capital) 
+ 10 	 Diffun 
+ 10 	 Maddela 
+ 10 	 Nagtipunan 
+ 10 	 Saguday 
+ 11 	 Abucay 
+ 11 	 Bagac 
+ 11 	 City of Balanga (Capital) 
+ 11 	 Dinalupihan 
+ 11 	 Hermosa 
+ 11 	 Limay 
+ 11 	 Mariveles 
+ 11 	 Morong 
+ 11 	 Orani 
+ 11 	 Orion 
+ 11 	 Pilar 
+ 11 	 Samal 
+ 12 	 Angat 
+ 12 	 Balagtas 
+ 12 	 Baliuag 
+ 12 	 Bocaue 
+ 12 	 Bulacan 
+ 12 	 Bustos 
+ 12 	 Calumpit 
+ 12 	 City of Malolos (Capital) 
+ 12 	 City of Meycauayan 
+ 12 	 City of San Jose Del Monte 
+ 12 	 Doña Remedios Trinidad 
+ 12 	 Guiguinto 
+ 12 	 Hagonoy 
+ 12 	 Marilao 
+ 12 	 Norzagaray 
+ 12 	 Obando 
+ 12 	 Pandi 
+ 12 	 Paombong 
+ 12 	 Plaridel 
+ 12 	 Pulilan 
+ 12 	 San Ildefonso 
+ 12 	 San Miguel 
+ 12 	 San Rafael 
+ 12 	 Santa Maria 
+ 13 	 Aliaga 
+ 13 	 Bongabon 
+ 13 	 Cabiao 
+ 13 	 Carranglan 
+ 13 	 City of Cabanatuan 
+ 13 	 City of Gapan 
+ 13 	 City of Palayan (Capital) 
+ 13 	 Cuyapo 
+ 13 	 Gabaldon 
+ 13 	 General Mamerto Natividad 
+ 13 	 General Tinio 
+ 13 	 Guimba 
+ 13 	 Jaen 
+ 13 	 Laur 
+ 13 	 Licab 
+ 13 	 Llanera 
+ 13 	 Lupao 
+ 13 	 Nampicuan 
+ 13 	 Pantabangan 
+ 13 	 Peñaranda 
+ 13 	 Quezon 
+ 13 	 Rizal 
+ 13 	 San Antonio 
+ 13 	 San Isidro 
+ 13 	 San Jose City 
+ 13 	 San Leonardo 
+ 13 	 Santa Rosa 
+ 13 	 Santo Domingo 
+ 13 	 Science City of Muñoz 
+ 13 	 Talavera 
+ 13 	 Talugtug 
+ 13 	 Zaragoza 
+ 14 	 Apalit 
+ 14 	 Arayat 
+ 14 	 Bacolor 
+ 14 	 Candaba 
+ 14 	 City of Angeles 
+ 14 	 City of San Fernando (Capital) 
+ 14 	 Floridablanca 
+ 14 	 Guagua 
+ 14 	 Lubao 
+ 14 	 Mabalacat City 
+ 14 	 Macabebe 
+ 14 	 Magalang 
+ 14 	 Masantol 
+ 14 	 Mexico 
+ 14 	 Minalin 
+ 14 	 Porac 
+ 14 	 San Luis 
+ 14 	 San Simon 
+ 14 	 Santa Ana 
+ 14 	 Santa Rita 
+ 14 	 Santo Tomas 
+ 14 	 Sasmuan 
+ 15 	 Anao 
+ 15 	 Bamban 
+ 15 	 Camiling 
+ 15 	 Capas 
+ 15 	 City of Tarlac (Capital) 
+ 15 	 Concepcion 
+ 15 	 Gerona 
+ 15 	 La Paz 
+ 15 	 Mayantoc 
+ 15 	 Moncada 
+ 15 	 Paniqui 
+ 15 	 Pura 
+ 15 	 Ramos 
+ 15 	 San Clemente 
+ 15 	 San Jose 
+ 15 	 San Manuel 
+ 15 	 Santa Ignacia 
+ 15 	 Victoria 
+ 16 	 Botolan 
+ 16 	 Cabangan 
+ 16 	 Candelaria 
+ 16 	 Castillejos 
+ 16 	 City of Olongapo 
+ 16 	 Iba (Capital) 
+ 16 	 Masinloc 
+ 16 	 Palauig 
+ 16 	 San Antonio 
+ 16 	 San Felipe 
+ 16 	 San Marcelino 
+ 16 	 San Narciso 
+ 16 	 Santa Cruz 
+ 16 	 Subic 
+ 17 	 Baler (Capital) 
+ 17 	 Casiguran 
+ 17 	 Dilasag 
+ 17 	 Dinalungan 
+ 17 	 Dingalan 
+ 17 	 Dipaculao 
+ 17 	 Maria Aurora 
+ 17 	 San Luis 
+ 18 	 Agoncillo 
+ 18 	 Alitagtag 
+ 18 	 Balayan 
+ 18 	 Balete 
+ 18 	 Batangas City (Capital) 
+ 18 	 Bauan 
+ 18 	 Calaca 
+ 18 	 Calatagan 
+ 18 	 City of Lipa 
+ 18 	 City of Sto. Tomas 
+ 18 	 City of Tanauan 
+ 18 	 Cuenca 
+ 18 	 Ibaan 
+ 18 	 Laurel 
+ 18 	 Lemery 
+ 18 	 Lian 
+ 18 	 Lobo 
+ 18 	 Mabini 
+ 18 	 Malvar 
+ 18 	 Mataasnakahoy 
+ 18 	 Nasugbu 
+ 18 	 Padre Garcia 
+ 18 	 Rosario 
+ 18 	 San Jose 
+ 18 	 San Juan 
+ 18 	 San Luis 
+ 18 	 San Nicolas 
+ 18 	 San Pascual 
+ 18 	 Santa Teresita 
+ 18 	 Taal 
+ 18 	 Talisay 
+ 18 	 Taysan 
+ 18 	 Tingloy 
+ 18 	 Tuy 
+ 19 	 Alfonso 
+ 19 	 Amadeo 
+ 19 	 Carmona 
+ 19 	 City of Bacoor 
+ 19 	 City of Cavite 
+ 19 	 City of Dasmariñas 
+ 19 	 City of General Trias 
+ 19 	 City of Imus 
+ 19 	 City of Tagaytay 
+ 19 	 City of Trece Martires (Capital) 
+ 19 	 Gen. Mariano Alvarez 
+ 19 	 General Emilio Aguinaldo 
+ 19 	 Indang 
+ 19 	 Kawit 
+ 19 	 Magallanes 
+ 19 	 Maragondon 
+ 19 	 Mendez 
+ 19 	 Naic 
+ 19 	 Noveleta 
+ 19 	 Rosario 
+ 19 	 Silang 
+ 19 	 Tanza 
+ 19 	 Ternate 
+ 20 	 Alaminos 
+ 20 	 Bay 
+ 20 	 Calauan 
+ 20 	 Cavinti 
+ 20 	 City of Biñan 
+ 20 	 City of Cabuyao 
+ 20 	 City of Calamba 
+ 20 	 City of San Pablo 
+ 20 	 City of San Pedro 
+ 20 	 City of Santa Rosa 
+ 20 	 Famy 
+ 20 	 Kalayaan 
+ 20 	 Liliw 
+ 20 	 Los Baños 
+ 20 	 Luisiana 
+ 20 	 Lumban 
+ 20 	 Mabitac 
+ 20 	 Magdalena 
+ 20 	 Majayjay 
+ 20 	 Nagcarlan 
+ 20 	 Paete 
+ 20 	 Pagsanjan 
+ 20 	 Pakil 
+ 20 	 Pangil 
+ 20 	 Pila 
+ 20 	 Rizal 
+ 20 	 Santa Cruz (Capital) 
+ 20 	 Santa Maria 
+ 20 	 Siniloan 
+ 20 	 Victoria 
+ 21 	 Agdangan 
+ 21 	 Alabat 
+ 21 	 Atimonan 
+ 21 	 Buenavista 
+ 21 	 Burdeos 
+ 21 	 Calauag 
+ 21 	 Candelaria 
+ 21 	 Catanauan 
+ 21 	 City of Lucena (Capital) 
+ 21 	 City of Tayabas 
+ 21 	 Dolores 
+ 21 	 General Luna 
+ 21 	 General Nakar 
+ 21 	 Guinayangan 
+ 21 	 Gumaca 
+ 21 	 Infanta 
+ 21 	 Jomalig 
+ 21 	 Lopez 
+ 21 	 Lucban 
+ 21 	 Macalelon 
+ 21 	 Mauban 
+ 21 	 Mulanay 
+ 21 	 Padre Burgos 
+ 21 	 Pagbilao 
+ 21 	 Panukulan 
+ 21 	 Patnanungan 
+ 21 	 Perez 
+ 21 	 Pitogo 
+ 21 	 Plaridel 
+ 21 	 Polillo 
+ 21 	 Quezon 
+ 21 	 Real 
+ 21 	 Sampaloc 
+ 21 	 San Andres 
+ 21 	 San Antonio 
+ 21 	 San Francisco 
+ 21 	 San Narciso 
+ 21 	 Sariaya 
+ 21 	 Tagkawayan 
+ 21 	 Tiaong 
+ 21 	 Unisan 
+ 22 	 Angono 
+ 22 	 Baras 
+ 22 	 Binangonan 
+ 22 	 Cainta 
+ 22 	 Cardona 
+ 22 	 City of Antipolo (Capital) 
+ 22 	 Jala-Jala 
+ 22 	 Morong 
+ 22 	 Pililla 
+ 22 	 Rodriguez 
+ 22 	 San Mateo 
+ 22 	 Tanay 
+ 22 	 Taytay 
+ 22 	 Teresa 
+ 23 	 Boac (Capital) 
+ 23 	 Buenavista 
+ 23 	 Gasan 
+ 23 	 Mogpog 
+ 23 	 Santa Cruz 
+ 23 	 Torrijos 
+ 24 	 Abra De Ilog 
+ 24 	 Calintaan 
+ 24 	 Looc 
+ 24 	 Lubang 
+ 24 	 Magsaysay 
+ 24 	 Mamburao (Capital) 
+ 24 	 Paluan 
+ 24 	 Rizal 
+ 24 	 Sablayan 
+ 24 	 San Jose 
+ 24 	 Santa Cruz 
+ 25 	 Baco 
+ 25 	 Bansud 
+ 25 	 Bongabong 
+ 25 	 Bulalacao 
+ 25 	 City of Calapan (Capital) 
+ 25 	 Gloria 
+ 25 	 Mansalay 
+ 25 	 Naujan 
+ 25 	 Pinamalayan 
+ 25 	 Pola 
+ 25 	 Puerto Galera 
+ 25 	 Roxas 
+ 25 	 San Teodoro 
+ 25 	 Socorro 
+ 25 	 Victoria 
+ 26 	 Aborlan 
+ 26 	 Agutaya 
+ 26 	 Araceli 
+ 26 	 Balabac 
+ 26 	 Bataraza 
+ 26 	 Brooke'S Point 
+ 26 	 Busuanga 
+ 26 	 Cagayancillo 
+ 26 	 City of Puerto Princesa (Capital) 
+ 26 	 Coron 
+ 26 	 Culion 
+ 26 	 Cuyo 
+ 26 	 Dumaran 
+ 26 	 El Nido 
+ 26 	 Kalayaan 
+ 26 	 Linapacan 
+ 26 	 Magsaysay 
+ 26 	 Narra 
+ 26 	 Quezon 
+ 26 	 Rizal 
+ 26 	 Roxas 
+ 26 	 San Vicente 
+ 26 	 Sofronio Española 
+ 26 	 Taytay 
+ 27 	 Alcantara 
+ 27 	 Banton 
+ 27 	 Cajidiocan 
+ 27 	 Calatrava 
+ 27 	 Concepcion 
+ 27 	 Corcuera 
+ 27 	 Ferrol 
+ 27 	 Looc 
+ 27 	 Magdiwang 
+ 27 	 Odiongan 
+ 27 	 Romblon (Capital) 
+ 27 	 San Agustin 
+ 27 	 San Andres 
+ 27 	 San Fernando 
+ 27 	 San Jose 
+ 27 	 Santa Fe 
+ 27 	 Santa Maria 
+ 28 	 Bacacay 
+ 28 	 Camalig 
+ 28 	 City of Legazpi (Capital) 
+ 28 	 City of Ligao 
+ 28 	 City of Tabaco 
+ 28 	 Daraga 
+ 28 	 Guinobatan 
+ 28 	 Jovellar 
+ 28 	 Libon 
+ 28 	 Malilipot 
+ 28 	 Malinao 
+ 28 	 Manito 
+ 28 	 Oas 
+ 28 	 Pio Duran 
+ 28 	 Polangui 
+ 28 	 Rapu-Rapu 
+ 28 	 Santo Domingo 
+ 28 	 Tiwi 
+ 29 	 Basud 
+ 29 	 Capalonga 
+ 29 	 Daet (Capital) 
+ 29 	 Jose Panganiban 
+ 29 	 Labo 
+ 29 	 Mercedes 
+ 29 	 Paracale 
+ 29 	 San Lorenzo Ruiz 
+ 29 	 San Vicente 
+ 29 	 Santa Elena 
+ 29 	 Talisay 
+ 29 	 Vinzons 
+ 30 	 Baao 
+ 30 	 Balatan 
+ 30 	 Bato 
+ 30 	 Bombon 
+ 30 	 Buhi 
+ 30 	 Bula 
+ 30 	 Cabusao 
+ 30 	 Calabanga 
+ 30 	 Camaligan 
+ 30 	 Canaman 
+ 30 	 Caramoan 
+ 30 	 City of Iriga 
+ 30 	 City of Naga 
+ 30 	 Del Gallego 
+ 30 	 Gainza 
+ 30 	 Garchitorena 
+ 30 	 Goa 
+ 30 	 Lagonoy 
+ 30 	 Libmanan 
+ 30 	 Lupi 
+ 30 	 Magarao 
+ 30 	 Milaor 
+ 30 	 Minalabac 
+ 30 	 Nabua 
+ 30 	 Ocampo 
+ 30 	 Pamplona 
+ 30 	 Pasacao 
+ 30 	 Pili (Capital) 
+ 30 	 Presentacion 
+ 30 	 Ragay 
+ 30 	 Sagñay 
+ 30 	 San Fernando 
+ 30 	 San Jose 
+ 30 	 Sipocot 
+ 30 	 Siruma 
+ 30 	 Tigaon 
+ 30 	 Tinambac 
+ 31 	 Bagamanoc 
+ 31 	 Baras 
+ 31 	 Bato 
+ 31 	 Caramoran 
+ 31 	 Gigmoto 
+ 31 	 Pandan 
+ 31 	 Panganiban 
+ 31 	 San Andres 
+ 31 	 San Miguel 
+ 31 	 Viga 
+ 31 	 Virac (Capital) 
+ 32 	 Aroroy 
+ 32 	 Baleno 
+ 32 	 Balud 
+ 32 	 Batuan 
+ 32 	 Cataingan 
+ 32 	 Cawayan 
+ 32 	 City of Masbate (Capital) 
+ 32 	 Claveria 
+ 32 	 Dimasalang 
+ 32 	 Esperanza 
+ 32 	 Mandaon 
+ 32 	 Milagros 
+ 32 	 Mobo 
+ 32 	 Monreal 
+ 32 	 Palanas 
+ 32 	 Pio V. Corpuz 
+ 32 	 Placer 
+ 32 	 San Fernando 
+ 32 	 San Jacinto 
+ 32 	 San Pascual 
+ 32 	 Uson 
+ 33 	 Barcelona 
+ 33 	 Bulan 
+ 33 	 Bulusan 
+ 33 	 Casiguran 
+ 33 	 Castilla 
+ 33 	 City of Sorsogon (Capital) 
+ 33 	 Donsol 
+ 33 	 Gubat 
+ 33 	 Irosin 
+ 33 	 Juban 
+ 33 	 Magallanes 
+ 33 	 Matnog 
+ 33 	 Pilar 
+ 33 	 Prieto Diaz 
+ 33 	 Santa Magdalena 
+ 34 	 Altavas 
+ 34 	 Balete 
+ 34 	 Banga 
+ 34 	 Batan 
+ 34 	 Buruanga 
+ 34 	 Ibajay 
+ 34 	 Kalibo (Capital) 
+ 34 	 Lezo 
+ 34 	 Libacao 
+ 34 	 Madalag 
+ 34 	 Makato 
+ 34 	 Malay 
+ 34 	 Malinao 
+ 34 	 Nabas 
+ 34 	 New Washington 
+ 34 	 Numancia 
+ 34 	 Tangalan 
+ 35 	 Anini-Y 
+ 35 	 Barbaza 
+ 35 	 Belison 
+ 35 	 Bugasong 
+ 35 	 Caluya 
+ 35 	 Culasi 
+ 35 	 Hamtic 
+ 35 	 Laua-An 
+ 35 	 Libertad 
+ 35 	 Pandan 
+ 35 	 Patnongon 
+ 35 	 San Jose (Capital) 
+ 35 	 San Remigio 
+ 35 	 Sebaste 
+ 35 	 Sibalom 
+ 35 	 Tibiao 
+ 35 	 Tobias Fornier 
+ 35 	 Valderrama 
+ 36 	 City of Roxas (Capital) 
+ 36 	 Cuartero 
+ 36 	 Dao 
+ 36 	 Dumalag 
+ 36 	 Dumarao 
+ 36 	 Ivisan 
+ 36 	 Jamindan 
+ 36 	 Ma-Ayon 
+ 36 	 Mambusao 
+ 36 	 Panay 
+ 36 	 Panitan 
+ 36 	 Pilar 
+ 36 	 Pontevedra 
+ 36 	 President Roxas 
+ 36 	 Sapi-An 
+ 36 	 Sigma 
+ 36 	 Tapaz 
+ 37 	 Ajuy 
+ 37 	 Alimodian 
+ 37 	 Anilao 
+ 37 	 Badiangan 
+ 37 	 Balasan 
+ 37 	 Banate 
+ 37 	 Barotac Nuevo 
+ 37 	 Barotac Viejo 
+ 37 	 Batad 
+ 37 	 Bingawan 
+ 37 	 Cabatuan 
+ 37 	 Calinog 
+ 37 	 Carles 
+ 37 	 City of Iloilo (Capital) 
+ 37 	 City of Passi 
+ 37 	 Concepcion 
+ 37 	 Dingle 
+ 37 	 Dueñas 
+ 37 	 Dumangas 
+ 37 	 Estancia 
+ 37 	 Guimbal 
+ 37 	 Igbaras 
+ 37 	 Janiuay 
+ 37 	 Lambunao 
+ 37 	 Leganes 
+ 37 	 Lemery 
+ 37 	 Leon 
+ 37 	 Maasin 
+ 37 	 Miagao 
+ 37 	 Mina 
+ 37 	 New Lucena 
+ 37 	 Oton 
+ 37 	 Pavia 
+ 37 	 Pototan 
+ 37 	 San Dionisio 
+ 37 	 San Enrique 
+ 37 	 San Joaquin 
+ 37 	 San Miguel 
+ 37 	 San Rafael 
+ 37 	 Santa Barbara 
+ 37 	 Sara 
+ 37 	 Tigbauan 
+ 37 	 Tubungan 
+ 37 	 Zarraga 
+ 38 	 Binalbagan 
+ 38 	 Calatrava 
+ 38 	 Candoni 
+ 38 	 Cauayan 
+ 38 	 City of Bacolod (Capital) 
+ 38 	 City of Bago 
+ 38 	 City of Cadiz 
+ 38 	 City of Escalante 
+ 38 	 City of Himamaylan 
+ 38 	 City of Kabankalan 
+ 38 	 City of La Carlota 
+ 38 	 City of Sagay 
+ 38 	 City of San Carlos 
+ 38 	 City of Silay 
+ 38 	 City of Sipalay 
+ 38 	 City of Talisay 
+ 38 	 City of Victorias 
+ 38 	 Enrique B. Magalona 
+ 38 	 Hinigaran 
+ 38 	 Hinoba-an 
+ 38 	 Ilog 
+ 38 	 Isabela 
+ 38 	 La Castellana 
+ 38 	 Manapla 
+ 38 	 Moises Padilla 
+ 38 	 Murcia 
+ 38 	 Pontevedra 
+ 38 	 Pulupandan 
+ 38 	 Salvador Benedicto 
+ 38 	 San Enrique 
+ 38 	 Toboso 
+ 38 	 Valladolid 
+ 39 	 Buenavista 
+ 39 	 Jordan (Capital) 
+ 39 	 Nueva Valencia 
+ 39 	 San Lorenzo 
+ 39 	 Sibunag 
+ 40 	 Alburquerque 
+ 40 	 Alicia 
+ 40 	 Anda 
+ 40 	 Antequera 
+ 40 	 Baclayon 
+ 40 	 Balilihan 
+ 40 	 Batuan 
+ 40 	 Bien Unido 
+ 40 	 Bilar 
+ 40 	 Buenavista 
+ 40 	 Calape 
+ 40 	 Candijay 
+ 40 	 Carmen 
+ 40 	 Catigbian 
+ 40 	 City of Tagbilaran (Capital) 
+ 40 	 Clarin 
+ 40 	 Corella 
+ 40 	 Cortes 
+ 40 	 Dagohoy 
+ 40 	 Danao 
+ 40 	 Dauis 
+ 40 	 Dimiao 
+ 40 	 Duero 
+ 40 	 Garcia Hernandez 
+ 40 	 Getafe 
+ 40 	 Guindulman 
+ 40 	 Inabanga 
+ 40 	 Jagna 
+ 40 	 Lila 
+ 40 	 Loay 
+ 40 	 Loboc 
+ 40 	 Loon 
+ 40 	 Mabini 
+ 40 	 Maribojoc 
+ 40 	 Panglao 
+ 40 	 Pilar 
+ 40 	 Pres. Carlos P. Garcia 
+ 40 	 Sagbayan 
+ 40 	 San Isidro 
+ 40 	 San Miguel 
+ 40 	 Sevilla 
+ 40 	 Sierra Bullones 
+ 40 	 Sikatuna 
+ 40 	 Talibon 
+ 40 	 Trinidad 
+ 40 	 Tubigon 
+ 40 	 Ubay 
+ 40 	 Valencia 
+ 41 	 Alcantara 
+ 41 	 Alcoy 
+ 41 	 Alegria 
+ 41 	 Aloguinsan 
+ 41 	 Argao 
+ 41 	 Asturias 
+ 41 	 Badian 
+ 41 	 Balamban 
+ 41 	 Bantayan 
+ 41 	 Barili 
+ 41 	 Boljoon 
+ 41 	 Borbon 
+ 41 	 Carmen 
+ 41 	 Catmon 
+ 41 	 City of Bogo 
+ 41 	 City of Carcar 
+ 41 	 City of Cebu (Capital) 
+ 41 	 City of Lapu-Lapu 
+ 41 	 City of Mandaue 
+ 41 	 City of Naga 
+ 41 	 City of Talisay 
+ 41 	 City of Toledo 
+ 41 	 Compostela 
+ 41 	 Consolacion 
+ 41 	 Cordova 
+ 41 	 Daanbantayan 
+ 41 	 Dalaguete 
+ 41 	 Danao City 
+ 41 	 Dumanjug 
+ 41 	 Ginatilan 
+ 41 	 Liloan 
+ 41 	 Madridejos 
+ 41 	 Malabuyoc 
+ 41 	 Medellin 
+ 41 	 Minglanilla 
+ 41 	 Moalboal 
+ 41 	 Oslob 
+ 41 	 Pilar 
+ 41 	 Pinamungajan 
+ 41 	 Poro 
+ 41 	 Ronda 
+ 41 	 Samboan 
+ 41 	 San Fernando 
+ 41 	 San Francisco 
+ 41 	 San Remigio 
+ 41 	 Santa Fe 
+ 41 	 Santander 
+ 41 	 Sibonga 
+ 41 	 Sogod 
+ 41 	 Tabogon 
+ 41 	 Tabuelan 
+ 41 	 Tuburan 
+ 41 	 Tudela 
+ 42 	 Amlan 
+ 42 	 Ayungon 
+ 42 	 Bacong 
+ 42 	 Basay 
+ 42 	 Bindoy 
+ 42 	 City of Bais 
+ 42 	 City of Bayawan 
+ 42 	 City of Canlaon 
+ 42 	 City of Dumaguete (Capital) 
+ 42 	 City of Guihulngan 
+ 42 	 City of Tanjay 
+ 42 	 Dauin 
+ 42 	 Jimalalud 
+ 42 	 La Libertad 
+ 42 	 Mabinay 
+ 42 	 Manjuyod 
+ 42 	 Pamplona 
+ 42 	 San Jose 
+ 42 	 Santa Catalina 
+ 42 	 Siaton 
+ 42 	 Sibulan 
+ 42 	 Tayasan 
+ 42 	 Valencia 
+ 42 	 Vallehermoso 
+ 42 	 Zamboanguita 
+ 43 	 Enrique Villanueva 
+ 43 	 Larena 
+ 43 	 Lazi 
+ 43 	 Maria 
+ 43 	 San Juan 
+ 43 	 Siquijor (Capital) 
+ 44 	 Arteche 
+ 44 	 Balangiga 
+ 44 	 Balangkayan 
+ 44 	 Can-Avid 
+ 44 	 City of Borongan (Capital) 
+ 44 	 Dolores 
+ 44 	 General Macarthur 
+ 44 	 Giporlos 
+ 44 	 Guiuan 
+ 44 	 Hernani 
+ 44 	 Jipapad 
+ 44 	 Lawaan 
+ 44 	 Llorente 
+ 44 	 Maslog 
+ 44 	 Maydolong 
+ 44 	 Mercedes 
+ 44 	 Oras 
+ 44 	 Quinapondan 
+ 44 	 Salcedo 
+ 44 	 San Julian 
+ 44 	 San Policarpo 
+ 44 	 Sulat 
+ 44 	 Taft 
+ 45 	 Abuyog 
+ 45 	 Alangalang 
+ 45 	 Albuera 
+ 45 	 Babatngon 
+ 45 	 Barugo 
+ 45 	 Bato 
+ 45 	 Burauen 
+ 45 	 Calubian 
+ 45 	 Capoocan 
+ 45 	 Carigara 
+ 45 	 City of Baybay 
+ 45 	 City of Tacloban (Capital) 
+ 45 	 Dagami 
+ 45 	 Dulag 
+ 45 	 Hilongos 
+ 45 	 Hindang 
+ 45 	 Inopacan 
+ 45 	 Isabel 
+ 45 	 Jaro 
+ 45 	 Javier 
+ 45 	 Julita 
+ 45 	 Kananga 
+ 45 	 La Paz 
+ 45 	 Leyte 
+ 45 	 Macarthur 
+ 45 	 Mahaplag 
+ 45 	 Matag-Ob 
+ 45 	 Matalom 
+ 45 	 Mayorga 
+ 45 	 Merida 
+ 45 	 Ormoc City 
+ 45 	 Palo 
+ 45 	 Palompon 
+ 45 	 Pastrana 
+ 45 	 San Isidro 
+ 45 	 San Miguel 
+ 45 	 Santa Fe 
+ 45 	 Tabango 
+ 45 	 Tabontabon 
+ 45 	 Tanauan 
+ 45 	 Tolosa 
+ 45 	 Tunga 
+ 45 	 Villaba 
+ 46 	 Allen 
+ 46 	 Biri 
+ 46 	 Bobon 
+ 46 	 Capul 
+ 46 	 Catarman (Capital) 
+ 46 	 Catubig 
+ 46 	 Gamay 
+ 46 	 Laoang 
+ 46 	 Lapinig 
+ 46 	 Las Navas 
+ 46 	 Lavezares 
+ 46 	 Lope De Vega 
+ 46 	 Mapanas 
+ 46 	 Mondragon 
+ 46 	 Palapag 
+ 46 	 Pambujan 
+ 46 	 Rosario 
+ 46 	 San Antonio 
+ 46 	 San Isidro 
+ 46 	 San Jose 
+ 46 	 San Roque 
+ 46 	 San Vicente 
+ 46 	 Silvino Lobos 
+ 46 	 Victoria 
+ 47 	 Almagro 
+ 47 	 Basey 
+ 47 	 Calbiga 
+ 47 	 City of Calbayog 
+ 47 	 City of Catbalogan (Capital) 
+ 47 	 Daram 
+ 47 	 Gandara 
+ 47 	 Hinabangan 
+ 47 	 Jiabong 
+ 47 	 Marabut 
+ 47 	 Matuguinao 
+ 47 	 Motiong 
+ 47 	 Pagsanghan 
+ 47 	 Paranas 
+ 47 	 Pinabacdao 
+ 47 	 San Jorge 
+ 47 	 San Jose De Buan 
+ 47 	 San Sebastian 
+ 47 	 Santa Margarita 
+ 47 	 Santa Rita 
+ 47 	 Santo Niño 
+ 47 	 Tagapul-An 
+ 47 	 Talalora 
+ 47 	 Tarangnan 
+ 47 	 Villareal 
+ 47 	 Zumarraga 
+ 48 	 Anahawan 
+ 48 	 Bontoc 
+ 48 	 City of Maasin (Capital) 
+ 48 	 Hinunangan 
+ 48 	 Hinundayan 
+ 48 	 Libagon 
+ 48 	 Liloan 
+ 48 	 Limasawa 
+ 48 	 Macrohon 
+ 48 	 Malitbog 
+ 48 	 Padre Burgos 
+ 48 	 Pintuyan 
+ 48 	 Saint Bernard 
+ 48 	 San Francisco 
+ 48 	 San Juan 
+ 48 	 San Ricardo 
+ 48 	 Silago 
+ 48 	 Sogod 
+ 48 	 Tomas Oppus 
+ 49 	 Almeria 
+ 49 	 Biliran 
+ 49 	 Cabucgayan 
+ 49 	 Caibiran 
+ 49 	 Culaba 
+ 49 	 Kawayan 
+ 49 	 Maripipi 
+ 49 	 Naval (Capital) 
+ 50 	 Bacungan 
+ 50 	 Baliguian 
+ 50 	 City of Dapitan 
+ 50 	 City of Dipolog (Capital) 
+ 50 	 Godod 
+ 50 	 Gutalac 
+ 50 	 Jose Dalman 
+ 50 	 Kalawit 
+ 50 	 Katipunan 
+ 50 	 La Libertad 
+ 50 	 Labason 
+ 50 	 Liloy 
+ 50 	 Manukan 
+ 50 	 Mutia 
+ 50 	 Piñan 
+ 50 	 Polanco 
+ 50 	 Pres. Manuel A. Roxas 
+ 50 	 Rizal 
+ 50 	 Salug 
+ 50 	 Sergio Osmeña Sr. 
+ 50 	 Siayan 
+ 50 	 Sibuco 
+ 50 	 Sibutad 
+ 50 	 Sindangan 
+ 50 	 Siocon 
+ 50 	 Sirawai 
+ 50 	 Tampilisan 
+ 51 	 Aurora 
+ 51 	 Bayog 
+ 51 	 City of Pagadian (Capital) 
+ 51 	 City of Zamboanga 
+ 51 	 Dimataling 
+ 51 	 Dinas 
+ 51 	 Dumalinao 
+ 51 	 Dumingag 
+ 51 	 Guipos 
+ 51 	 Josefina 
+ 51 	 Kumalarang 
+ 51 	 Labangan 
+ 51 	 Lakewood 
+ 51 	 Lapuyan 
+ 51 	 Mahayag 
+ 51 	 Margosatubig 
+ 51 	 Midsalip 
+ 51 	 Molave 
+ 51 	 Pitogo 
+ 51 	 Ramon Magsaysay 
+ 51 	 San Miguel 
+ 51 	 San Pablo 
+ 51 	 Sominot 
+ 51 	 Tabina 
+ 51 	 Tambulig 
+ 51 	 Tigbao 
+ 51 	 Tukuran 
+ 51 	 Vincenzo A. Sagun 
+ 52 	 Alicia 
+ 52 	 Buug 
+ 52 	 City of Isabela 
+ 52 	 Diplahan 
+ 52 	 Imelda 
+ 52 	 Ipil (Capital) 
+ 52 	 Kabasalan 
+ 52 	 Mabuhay 
+ 52 	 Malangas 
+ 52 	 Naga 
+ 52 	 Olutanga 
+ 52 	 Payao 
+ 52 	 Roseller Lim 
+ 52 	 Siay 
+ 52 	 Talusan 
+ 52 	 Titay 
+ 52 	 Tungawan 
+ 53 	 Baungon 
+ 53 	 Cabanglasan 
+ 53 	 City of Malaybalay (Capital) 
+ 53 	 City of Valencia 
+ 53 	 Damulog 
+ 53 	 Dangcagan 
+ 53 	 Don Carlos 
+ 53 	 Impasug-ong 
+ 53 	 Kadingilan 
+ 53 	 Kalilangan 
+ 53 	 Kibawe 
+ 53 	 Kitaotao 
+ 53 	 Lantapan 
+ 53 	 Libona 
+ 53 	 Malitbog 
+ 53 	 Manolo Fortich 
+ 53 	 Maramag 
+ 53 	 Pangantucan 
+ 53 	 Quezon 
+ 53 	 San Fernando 
+ 53 	 Sumilao 
+ 53 	 Talakag 
+ 54 	 Catarman 
+ 54 	 Guinsiliban 
+ 54 	 Mahinog 
+ 54 	 Mambajao (Capital) 
+ 54 	 Sagay 
+ 55 	 Bacolod 
+ 55 	 Baloi 
+ 55 	 Baroy 
+ 55 	 City of Iligan 
+ 55 	 Kapatagan 
+ 55 	 Kauswagan 
+ 55 	 Kolambugan 
+ 55 	 Lala 
+ 55 	 Linamon 
+ 55 	 Magsaysay 
+ 55 	 Maigo 
+ 55 	 Matungao 
+ 55 	 Munai 
+ 55 	 Nunungan 
+ 55 	 Pantao Ragat 
+ 55 	 Pantar 
+ 55 	 Poona Piagapo 
+ 55 	 Salvador 
+ 55 	 Sapad 
+ 55 	 Sultan Naga Dimaporo 
+ 55 	 Tagoloan 
+ 55 	 Tangcal 
+ 55 	 Tubod (Capital) 
+ 56 	 Aloran 
+ 56 	 Baliangao 
+ 56 	 Bonifacio 
+ 56 	 Calamba 
+ 56 	 City of Oroquieta (Capital) 
+ 56 	 City of Ozamiz 
+ 56 	 City of Tangub 
+ 56 	 Clarin 
+ 56 	 Concepcion 
+ 56 	 Don Victoriano Chiongbian 
+ 56 	 Jimenez 
+ 56 	 Lopez Jaena 
+ 56 	 Panaon 
+ 56 	 Plaridel 
+ 56 	 Sapang Dalaga 
+ 56 	 Sinacaban 
+ 56 	 Tudela 
+ 57 	 Alubijid 
+ 57 	 Balingasag 
+ 57 	 Balingoan 
+ 57 	 Binuangan 
+ 57 	 City of Cagayan De Oro (Capital) 
+ 57 	 City of El Salvador 
+ 57 	 City of Gingoog 
+ 57 	 Claveria 
+ 57 	 Gitagum 
+ 57 	 Initao 
+ 57 	 Jasaan 
+ 57 	 Kinoguitan 
+ 57 	 Lagonglong 
+ 57 	 Laguindingan 
+ 57 	 Libertad 
+ 57 	 Lugait 
+ 57 	 Magsaysay 
+ 57 	 Manticao 
+ 57 	 Medina 
+ 57 	 Naawan 
+ 57 	 Opol 
+ 57 	 Salay 
+ 57 	 Sugbongcogon 
+ 57 	 Tagoloan 
+ 57 	 Talisayan 
+ 57 	 Villanueva 
+ 58 	 Asuncion 
+ 58 	 Braulio E. Dujali 
+ 58 	 Carmen 
+ 58 	 City of Panabo 
+ 58 	 City of Tagum (Capital) 
+ 58 	 Island Garden City of Samal 
+ 58 	 Kapalong 
+ 58 	 New Corella 
+ 58 	 San Isidro 
+ 58 	 Santo Tomas 
+ 58 	 Talaingod 
+ 59 	 Bansalan 
+ 59 	 City of Davao 
+ 59 	 City of Digos (Capital) 
+ 59 	 Hagonoy 
+ 59 	 Kiblawan 
+ 59 	 Magsaysay 
+ 59 	 Malalag 
+ 59 	 Matanao 
+ 59 	 Padada 
+ 59 	 Santa Cruz 
+ 59 	 Sulop 
+ 60 	 Baganga 
+ 60 	 Banaybanay 
+ 60 	 Boston 
+ 60 	 Caraga 
+ 60 	 Cateel 
+ 60 	 City of Mati (Capital) 
+ 60 	 Governor Generoso 
+ 60 	 Lupon 
+ 60 	 Manay 
+ 60 	 San Isidro 
+ 60 	 Tarragona 
+ 61 	 Compostela 
+ 61 	 Laak 
+ 61 	 Mabini 
+ 61 	 Maco 
+ 61 	 Maragusan 
+ 61 	 Mawab 
+ 61 	 Monkayo 
+ 61 	 Montevista 
+ 61 	 Nabunturan (Capital) 
+ 61 	 New Bataan 
+ 61 	 Pantukan 
+ 62 	 Don Marcelino 
+ 62 	 Jose Abad Santos 
+ 62 	 Malita (Capital) 
+ 62 	 Santa Maria 
+ 62 	 Sarangani 
+ 63 	 Alamada 
+ 63 	 Aleosan 
+ 63 	 Antipas 
+ 63 	 Arakan 
+ 63 	 Banisilan 
+ 63 	 Carmen 
+ 63 	 City of Kidapawan (Capital) 
+ 63 	 Kabacan 
+ 63 	 Libungan 
+ 63 	 M'Lang 
+ 63 	 Magpet 
+ 63 	 Makilala 
+ 63 	 Matalam 
+ 63 	 Midsayap 
+ 63 	 Pigkawayan 
+ 63 	 Pikit 
+ 63 	 President Roxas 
+ 63 	 Tulunan 
+ 64 	 Banga 
+ 64 	 City of General Santos 
+ 64 	 City of Koronadal (Capital) 
+ 64 	 Lake Sebu 
+ 64 	 Norala 
+ 64 	 Polomolok 
+ 64 	 Santo Niño 
+ 64 	 Surallah 
+ 64 	 T'Boli 
+ 64 	 Tampakan 
+ 64 	 Tantangan 
+ 64 	 Tupi 
+ 65 	 Bagumbayan 
+ 65 	 City of Tacurong 
+ 65 	 Columbio 
+ 65 	 Esperanza 
+ 65 	 Isulan (Capital) 
+ 65 	 Kalamansig 
+ 65 	 Lambayong 
+ 65 	 Lebak 
+ 65 	 Lutayan 
+ 65 	 Palimbang 
+ 65 	 President Quirino 
+ 65 	 Sen. Ninoy Aquino 
+ 66 	 Alabel (Capital) 
+ 66 	 Cotabato City 
+ 66 	 Glan 
+ 66 	 Kiamba 
+ 66 	 Maasim 
+ 66 	 Maitum 
+ 66 	 Malapatan 
+ 66 	 Malungon 
+ 67 	 Bangued (Capital) 
+ 67 	 Boliney 
+ 67 	 Bucay 
+ 67 	 Bucloc 
+ 67 	 Daguioman 
+ 67 	 Danglas 
+ 67 	 Dolores 
+ 67 	 La Paz 
+ 67 	 Lacub 
+ 67 	 Lagangilang 
+ 67 	 Lagayan 
+ 67 	 Langiden 
+ 67 	 Licuan-Baay 
+ 67 	 Luba 
+ 67 	 Malibcong 
+ 67 	 Manabo 
+ 67 	 Peñarrubia 
+ 67 	 Pidigan 
+ 67 	 Pilar 
+ 67 	 Sallapadan 
+ 67 	 San Isidro 
+ 67 	 San Juan 
+ 67 	 San Quintin 
+ 67 	 Tayum 
+ 67 	 Tineg 
+ 67 	 Tubo 
+ 67 	 Villaviciosa 
+ 68 	 Atok 
+ 68 	 Bakun 
+ 68 	 Bokod 
+ 68 	 Buguias 
+ 68 	 City of Baguio 
+ 68 	 Itogon 
+ 68 	 Kabayan 
+ 68 	 Kapangan 
+ 68 	 Kibungan 
+ 68 	 La Trinidad (Capital) 
+ 68 	 Mankayan 
+ 68 	 Sablan 
+ 68 	 Tuba 
+ 68 	 Tublay 
+ 69 	 Aguinaldo 
+ 69 	 Alfonso Lista 
+ 69 	 Asipulo 
+ 69 	 Banaue 
+ 69 	 Hingyon 
+ 69 	 Hungduan 
+ 69 	 Kiangan 
+ 69 	 Lagawe (Capital) 
+ 69 	 Lamut 
+ 69 	 Mayoyao 
+ 69 	 Tinoc 
+ 70 	 Balbalan 
+ 70 	 City of Tabuk (Capital) 
+ 70 	 Lubuagan 
+ 70 	 Pasil 
+ 70 	 Pinukpuk 
+ 70 	 Rizal 
+ 70 	 Tanudan 
+ 70 	 Tinglayan 
+ 71 	 Barlig 
+ 71 	 Bauko 
+ 71 	 Besao 
+ 71 	 Bontoc (Capital) 
+ 71 	 Natonin 
+ 71 	 Paracelis 
+ 71 	 Sabangan 
+ 71 	 Sadanga 
+ 71 	 Sagada 
+ 71 	 Tadian 
+ 72 	 Calanasan 
+ 72 	 Conner 
+ 72 	 Flora 
+ 72 	 Kabugao (Capital) 
+ 72 	 Luna 
+ 72 	 Pudtol 
+ 72 	 Santa Marcela 
+ 73 	 Akbar 
+ 73 	 Al-Barka 
+ 73 	 City of Lamitan (Capital) 
+ 73 	 Hadji Mohammad Ajul 
+ 73 	 Hadji Muhtamad 
+ 73 	 Lantawan 
+ 73 	 Maluso 
+ 73 	 Sumisip 
+ 73 	 Tabuan-Lasa 
+ 73 	 Tipo-Tipo 
+ 73 	 Tuburan 
+ 73 	 Ungkaya Pukan 
+ 74 	 Amai Manabilang 
+ 74 	 Bacolod-Kalawi 
+ 74 	 Balabagan 
+ 74 	 Balindong 
+ 74 	 Bayang 
+ 74 	 Binidayan 
+ 74 	 Buadiposo-Buntong 
+ 74 	 Bubong 
+ 74 	 Butig 
+ 74 	 Calanogas 
+ 74 	 City of Marawi (Capital) 
+ 74 	 Ditsaan-Ramain 
+ 74 	 Ganassi 
+ 74 	 Kapai 
+ 74 	 Kapatagan 
+ 74 	 Lumba-Bayabao 
+ 74 	 Lumbaca-Unayan 
+ 74 	 Lumbatan 
+ 74 	 Lumbayanague 
+ 74 	 Madalum 
+ 74 	 Madamba 
+ 74 	 Maguing 
+ 74 	 Malabang 
+ 74 	 Marantao 
+ 74 	 Marogong 
+ 74 	 Masiu 
+ 74 	 Mulondo 
+ 74 	 Pagayawan 
+ 74 	 Piagapo 
+ 74 	 Picong 
+ 74 	 Poona Bayabao 
+ 74 	 Pualas 
+ 74 	 Saguiaran 
+ 74 	 Sultan Dumalondong 
+ 74 	 Tagoloan Ii 
+ 74 	 Tamparan 
+ 74 	 Taraka 
+ 74 	 Tubaran 
+ 74 	 Tugaya 
+ 74 	 Wao 
+ 75 	 Ampatuan 
+ 75 	 Barira 
+ 75 	 Buldon 
+ 75 	 Buluan 
+ 75 	 Datu Abdullah Sangki 
+ 75 	 Datu Anggal Midtimbang 
+ 75 	 Datu Blah T. Sinsuat 
+ 75 	 Datu Hoffer Ampatuan 
+ 75 	 Datu Odin Sinsuat 
+ 75 	 Datu Paglas 
+ 75 	 Datu Piang 
+ 75 	 Datu Salibo 
+ 75 	 Datu Saudi-Ampatuan 
+ 75 	 Datu Unsay 
+ 75 	 Gen. S.K. Pendatun 
+ 75 	 Guindulungan 
+ 75 	 Kabuntalan 
+ 75 	 Mamasapano 
+ 75 	 Mangudadatu 
+ 75 	 Matanog 
+ 75 	 Northern Kabuntalan 
+ 75 	 Pagagawan 
+ 75 	 Pagalungan 
+ 75 	 Paglat 
+ 75 	 Pandag 
+ 75 	 Parang 
+ 75 	 Rajah Buayan 
+ 75 	 Shariff Aguak (Capital) 
+ 75 	 Shariff Saydona Mustapha 
+ 75 	 South Upi 
+ 75 	 Sultan Kudarat 
+ 75 	 Sultan Mastura 
+ 75 	 Sultan Sa Barongis 
+ 75 	 Talayan 
+ 75 	 Talitay 
+ 75 	 Upi 
+ 76 	 Hadji Panglima Tahil 
+ 76 	 Indanan 
+ 76 	 Jolo (Capital) 
+ 76 	 Kalingalan Caluang 
+ 76 	 Lugus 
+ 76 	 Luuk 
+ 76 	 Maimbung 
+ 76 	 Old Panamao 
+ 76 	 Omar 
+ 76 	 Pandami 
+ 76 	 Panglima Estino 
+ 76 	 Pangutaran 
+ 76 	 Parang 
+ 76 	 Pata 
+ 76 	 Patikul 
+ 76 	 Siasi 
+ 76 	 Talipao 
+ 76 	 Tapul 
+ 76 	 Tongkil 
+ 77 	 Bongao (Capital) 
+ 77 	 Languyan 
+ 77 	 Mapun 
+ 77 	 Panglima Sugala 
+ 77 	 Sapa-Sapa 
+ 77 	 Sibutu 
+ 77 	 Simunul 
+ 77 	 Sitangkai 
+ 77 	 South Ubian 
+ 77 	 Tandubas 
+ 77 	 Turtle Islands 
+ 78 	 Buenavista 
+ 78 	 Carmen 
+ 78 	 City of Butuan (Capital) 
+ 78 	 City of Cabadbaran 
+ 78 	 Jabonga 
+ 78 	 Kitcharao 
+ 78 	 Las Nieves 
+ 78 	 Magallanes 
+ 78 	 Nasipit 
+ 78 	 Remedios T. Romualdez 
+ 78 	 Santiago 
+ 78 	 Tubay 
+ 79 	 Bunawan 
+ 79 	 City of Bayugan 
+ 79 	 Esperanza 
+ 79 	 La Paz 
+ 79 	 Loreto 
+ 79 	 Prosperidad (Capital) 
+ 79 	 Rosario 
+ 79 	 San Francisco 
+ 79 	 San Luis 
+ 79 	 Santa Josefa 
+ 79 	 Sibagat 
+ 79 	 Talacogon 
+ 79 	 Trento 
+ 79 	 Veruela 
+ 80 	 Alegria 
+ 80 	 Bacuag 
+ 80 	 Burgos 
+ 80 	 City of Surigao (Capital) 
+ 80 	 Claver 
+ 80 	 Dapa 
+ 80 	 Del Carmen 
+ 80 	 General Luna 
+ 80 	 Gigaquit 
+ 80 	 Mainit 
+ 80 	 Malimono 
+ 80 	 Pilar 
+ 80 	 Placer 
+ 80 	 San Benito 
+ 80 	 San Francisco 
+ 80 	 San Isidro 
+ 80 	 Santa Monica 
+ 80 	 Sison 
+ 80 	 Socorro 
+ 80 	 Tagana-An 
+ 80 	 Tubod 
+ 81 	 Barobo 
+ 81 	 Bayabas 
+ 81 	 Cagwait 
+ 81 	 Cantilan 
+ 81 	 Carmen 
+ 81 	 Carrascal 
+ 81 	 City of Bislig 
+ 81 	 City of Tandag (Capital) 
+ 81 	 Cortes 
+ 81 	 Hinatuan 
+ 81 	 Lanuza 
+ 81 	 Lianga 
+ 81 	 Lingig 
+ 81 	 Madrid 
+ 81 	 Marihatag 
+ 81 	 San Agustin 
+ 81 	 San Miguel 
+ 81 	 Tagbina 
+ 81 	 Tago 
+ 82 	 Basilisa 
+ 82 	 Cagdianao 
+ 82 	 Dinagat 
+ 82 	 Libjo 
+ 82 	 Loreto 
+ 82 	 San Jose (Capital) 
+ 82 	 Tubajon 

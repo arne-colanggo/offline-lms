@@ -12,7 +12,7 @@ class DefaultUserSeeder extends Seeder
         $data = [
             'username' => 'admin',
             'password' => password_hash('1245', PASSWORD_BCRYPT),
-            'email' => 'admin@localhost',
+            'email' => 'admin@localhost.com',
             'role' => 'admin',
             'status' => 1,
             'profile_id' => 1

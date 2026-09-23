@@ -43,6 +43,11 @@ class ProfileTable extends Migration
                 'type' => 'date',
                 'null' => true
             ],
+            'street' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true
+            ],
             'addressid' => [
                 'type' => 'INT',
                 'constrain' => 5
@@ -50,22 +55,27 @@ class ProfileTable extends Migration
             'religion' => [
                 'type' => 'VARCHAR',
                 'constraint' => 50,
+                'null' => true
             ],
             'contact' => [
                 'type' => 'VARCHAR',
-                'constraint' => 50
+                'constraint' => 50,
+                'null' => true
             ],
             'fbaccount' => [
                 'type' => 'VARCHAR',
-                'constraint' => 50
+                'constraint' => 50,
+                'null' => true
             ],
             'email' => [
                 'type' => 'VARCHAR',
-                'constraint' => 50
+                'constraint' => 50,
+                'null' => true
             ],
             'picture' => [
                 'type' => 'VARCHAR',
-                'constraint' => 50
+                'constraint' => 50,
+                'null' => true
             ],
             'deleted' => [
                 'type' => 'ENUM',
