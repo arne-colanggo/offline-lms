@@ -31,7 +31,7 @@
                         onclick="event.preventDefault(); document.getElementById('profile_file').click();"
                         class="edit-avatar"><i class="fa fa-pencil"></i></a>
                     <input type="file" name="profile_file" id="profile_file" class="d-none" style="opacity:0">
-                    <img src="<?= (isset($profile->picture)) ? ($profile->picture == null) ? '/images/users/default-avatar.png' : '/images/users/' . $profile->picture : '/images/users/default-avatar.png' ?>"
+                    <img src="<?= (isset($profile->picture)) ? ($profile->picture == null) ? '/images/users/default-avatar.png' : '/images/students/' . $profile->picture : '/images/users/default-avatar.png' ?>"
                         alt="" class="avatar-photo ci-avatar-photo">
 
                 </div>
@@ -50,6 +50,10 @@
                         <ul class="nav nav-tabs customtab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#basic" role="tab">Basic
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#otherrelated" role="tab">Parent/Guardian
                                     Information</a>
                             </li>
                             <li class="nav-item">
@@ -129,12 +133,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Barangay</label>
-                                                <input type="hidden" name="barangay_id" id="barangay_id"
-                                                    value="<?= isset($profile) ? $profile->addressid : '' ?>">
+                                                <input type="hidden" name="barangay_id" id="barangay_id">
                                                 <div class="input-group">
                                                     <input class="form-control" type="text" id="barangay"
-                                                        name="barangay" readonly
-                                                        value="<?= isset($profile) ? $profile->address->barangay_name : '' ?>">
+                                                        name="barangay" readonly>
 
                                                     <div class="input-group-append">
                                                         <button type="button" class="btn btn-primary" id="btnBarangay"
@@ -149,22 +151,19 @@
                                             <div class="form-group">
                                                 <label>Municipality</label>
                                                 <input class="form-control form-control-lg" type="text"
-                                                    id="municipality" name="municipality" readonly
-                                                    value="<?= isset($profile) ? $profile->address->municipality_name : '' ?>">
+                                                    id="municipality" name="municipality" readonly value="">
                                                 <span class="text-danger error-text barangay_id_error"></span>
                                             </div>
                                             <div class="form-group">
                                                 <label>Province</label>
                                                 <input class="form-control form-control-lg" type="text" id="province"
-                                                    name="province"
-                                                    value="<?= isset($profile) ? $profile->address->province_name : '' ?>"
-                                                    readonly>
+                                                    name="province" value="" readonly>
                                                 <span class="text-danger error-text barangay_id_error"></span>
                                             </div>
                                             <div class="form-group">
                                                 <label>Phone Number</label>
-                                                <input class="form-control form-control-lg" type="text" id="contact"
-                                                    name="contact"
+                                                <input class="form-control form-control-lg" type="text"
+                                                    id="studentcontact" name="studentcontact"
                                                     value="<?= isset($profile) ? $profile->contact : '' ?>">
                                             </div>
 
@@ -173,6 +172,52 @@
                                 </div>
                             </div>
                             <!-- Basic Tab End -->
+                            <!-- Other Related Tab start -->
+                            <div class="tab-pane fade" id="otherrelated" role="tabpanel">
+                                <div class="pd-20">
+                                    <ul class="profile-edit-list row">
+                                        <li class="weight-500 col-md-6">
+
+                                            <div class="form-group">
+                                                <label>Father's Name</label>
+                                                <input class="form-control form-control-lg" type="text" id="fathersname"
+                                                    name="fathersname"
+                                                    value="<?= isset($student) ? $student->fathersname : '' ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Guardian</label>
+                                                <input class="form-control form-control-lg" type="text" id="guardian"
+                                                    name="guardian"
+                                                    value="<?= isset($student) ? $student->guardiansname : '' ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Relationship</label>
+                                                <input class="form-control form-control-lg" type="text"
+                                                    id="guardianrelationship" name="guardianrelationship"
+                                                    value="<?= isset($student) ? $student->relationship : '' ?>">
+                                            </div>
+                                        </li>
+                                        <li class="weight-500 col-md-6">
+
+                                            <div class="form-group">
+                                                <label>Mother's Name</label>
+                                                <input class="form-control form-control-lg" type="text" id="mothersname"
+                                                    name="mothersname"
+                                                    value="<?= isset($student) ? $student->mothersname : '' ?>">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Parent/Guardian Contact</label>
+                                                <input class="form-control form-control-lg" type="text"
+                                                    id="parentcontact" name="parentcontact"
+                                                    value="<?= isset($student) ? $student->parent_guardian_contact : '' ?>">
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Other Related Tab End -->
                             <!-- Social Media Tab start -->
                             <div class="tab-pane fade height-100-p" id="socialmedia" role="tabpanel">
                                 <div class="profile-setting">
@@ -183,7 +228,6 @@
                                                 <input class="form-control form-control-lg" type="text" id="email"
                                                     name="email" placeholder="Paste your email here"
                                                     value="<?= isset($profile) ? $profile->email : '' ?>">
-                                                <span class="text-danger error-text email_error"></span>
                                             </div>
 
 
@@ -284,7 +328,7 @@
         setRatio: 1,
 
         allowedExtensions: ['jpg', 'jpeg', 'png'],
-        processUrl: '<?= route_to('post.update.profilepicture') ?>?id=<?= isset($profile) ? $profile->id : 0 ?>',
+        processUrl: '<?= route_to('update-student-profile-picture') ?>?id=<?= isset($profile) ? $profile->id : 0 ?>',
         withCSRF: ['<?= csrf_token() ?>', '<?= csrf_hash() ?>'],
         onSuccess: function (message, element, status) {
             if (status == 1) {

@@ -134,6 +134,9 @@
 				<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 					<a class="dropdown-item" href="<?= route_to('user.profile'); ?>"><i class="dw dw-user1"></i>
 						Profile</a>
+					<a class="dropdown-item" data-toggle="modal" data-target="#changeCredentialsModal"><i
+							class="dw dw-user-11"></i>
+						Change Credentials</a>
 					<a class="dropdown-item" href="<?= route_to('settings') ?>"><i class="dw dw-settings2"></i>
 						Setting</a>
 					<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
@@ -142,9 +145,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="github-link">
-			<a href="https://github.com/dropways/deskapp" target="_blank"><img src="/backend/vendors/images/github.svg"
-					alt="" /></a>
-		</div>
+
 	</div>
 </div>

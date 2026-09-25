@@ -49,7 +49,7 @@
 			<div class="min-height-200px">
 				<?= $this->renderSection('content') ?>
 			</div>
-
+			<?= view('backend/pages/users/modal_change_credentials') ?>
 			<?php include('inc_admin/footer.php') ?>
 		</div>
 	</div>
@@ -67,6 +67,156 @@
 	<script src="/extra-assets/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
 	<?= $this->renderSection('scripts') ?>
 
+	<script>
+		$(document).ready(function () {
+
+			/*
+			 * Show / Hide Password
+			 */
+			$('.toggle-password').on('click', function () {
+
+				let target = $(this).data('target');
+				let input = $(target);
+				let icon = $(this).find('i');
+
+				if (input.attr('type') === 'password') {
+
+					input.attr('type', 'text');
+
+					icon.removeClass('fa-eye')
+						.addClass('fa-eye-slash');
+
+				} else {
+
+					input.attr('type', 'password');
+
+					icon.removeClass('fa-eye-slash')
+						.addClass('fa-eye');
+				}
+			});
+
+
+			/*
+			 * Submit Form
+			 */
+			$('#changeCredentialsForm').on('submit', function (e) {
+
+				e.preventDefault();
+
+				let form = this;
+				let formData = new FormData(form);
+				let button = $('#saveCredentialsBtn');
+				let alertBox = $('#credentialAlert');
+
+				let username = $('#new_username').val().trim();
+				let password = $('#new_password').val();
+				let confirmPassword = $('#confirm_password').val();
+
+				/*
+				 * At least one change must be made
+				 */
+				if (username === '' && password === '') {
+
+					alertBox
+						.removeClass('d-none alert-success')
+						.addClass('alert-danger')
+						.html('Please enter a new username or password.');
+
+					return;
+				}
+
+				/*
+				 * Check password confirmation
+				 */
+				if (password !== '' && password !== confirmPassword) {
+
+					alertBox
+						.removeClass('d-none alert-success')
+						.addClass('alert-danger')
+						.html('New password and confirmation password do not match.');
+
+					return;
+				}
+
+				/*
+				 * Disable button
+				 */
+				button.prop('disabled', true)
+					.html('<i class="fas fa-spinner fa-spin mr-1"></i> Saving...');
+
+				/*
+				 * Submit using AJAX
+				 */
+				$.ajax({
+					url: $(form).attr('action'),
+					method: $(form).attr('method'),
+					data: formData,
+					processData: false,
+					dataType: 'json',
+					contentType: false,
+					success: function (response) {
+						console.log(response);
+						if (response.status === 'success') {
+							alertBox
+								.removeClass('d-none alert-danger')
+								.addClass('alert-success')
+								.html(response.message);
+							setTimeout(function () {
+								$('#changeCredentialsModal').modal('hide');
+								location.reload();
+							}, 1200);
+						} else {
+
+							alertBox
+								.removeClass('d-none alert-success')
+								.addClass('alert-danger')
+								.html(response.message);
+							button.prop('disabled', false)
+								.html('<i class="fas fa-save mr-1"></i> Change Credentials');
+						}
+					},
+
+					error: function (xhr) {
+
+						let message = 'Unable to change credentials. Please try again.';
+
+						if (xhr.responseJSON && xhr.responseJSON.message) {
+							message = xhr.responseJSON.message;
+						}
+
+						alertBox
+							.removeClass('d-none alert-success')
+							.addClass('alert-danger')
+							.html(message);
+
+						button.prop('disabled', false)
+							.html('<i class="fas fa-save mr-1"></i> Change Credentials');
+					}
+
+				});
+
+			});
+
+
+			/*
+			 * Clear form when modal closes
+			 */
+			$('#changeCredentialsModal').on('hidden.bs.modal', function () {
+
+				$('#changeCredentialsForm')[0].reset();
+
+				$('#credentialAlert')
+					.addClass('d-none')
+					.removeClass('alert-success alert-danger')
+					.html('');
+
+				$('#saveCredentialsBtn')
+					.prop('disabled', false)
+					.html('<i class="fas fa-save mr-1"></i> Change Credentials');
+			});
+
+		});
+	</script>
 </body>
 
 </html>

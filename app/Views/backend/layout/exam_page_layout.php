@@ -44,7 +44,7 @@
 			<?php include('inc/footer.php') ?>
 		</div>
 	</div>
-
+	<script src="/backend/src/scripts/jquery.min.js"></script>
 	<script src="/backend/vendors/scripts/core.js"></script>
 	<script src="/backend/vendors/scripts/script.min.js"></script>
 	<script src="/backend/vendors/scripts/process.js"></script>

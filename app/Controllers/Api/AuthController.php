@@ -14,10 +14,12 @@ class AuthController extends BaseController
     protected UsersModel $userModel;
     protected AuthenticationServices $AuthServices;
     protected $helpers = ['url', 'form', 'CIMail', 'CIFunctions'];
+    protected $db;
     public function __construct()
     {
         $this->userModel = new UsersModel();
         $this->AuthServices = new AuthenticationServices();
+        $this->db = db_connect();
     }
 
     public function unauthorized()
@@ -254,6 +256,7 @@ class AuthController extends BaseController
         $user_profile = new ProfileModel();
         $profile_data = $user_profile->asObject()->where('id', $user['id'])->first();
         $profile_data->userdata = $user;
+        $profile_data->address = get_address($profile_data->addressid);
         return $profile_data;
 
 
@@ -261,7 +264,7 @@ class AuthController extends BaseController
     public function logout()
     {
         $this->AuthServices::forget();
-        return redirect()->route('login')->with('fail', 'User has been logout');
+        return redirect()->route('/')->with('fail', 'User has been logout');
 
     }
     public function logoutJWT()
