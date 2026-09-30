@@ -1,8 +1,10 @@
 <div class="left-side-bar">
 	<div class="brand-logo">
 		<a href="<?= route_to('home') ?>">
-			<img src="<?= '/images/settings/' . get_settings()->logo ?>" alt="" class="dark-logo" />
-			<img src="<?= '/images/settings/' . get_settings()->logo ?>" alt="" class="light-logo" />
+			<img src="<?= '/images/settings/' . get_settings()->logo ?>" alt="" class="dark-logo"
+				style="height:50px; width:50px;" />
+			<img src="<?= '/images/settings/' . get_settings()->logo ?>" alt="" class="light-logo"
+				style="height:50px; width:50px;" />
 		</a>
 		<div class="close-sidebar" data-toggle="left-sidebar-close">
 			<i class="ion-close-round"></i>
@@ -61,13 +63,13 @@
 					</a>
 					<ul class="submenu ">
 						<li>
-							<a href="<?= route_to('students') ?>" class="dropdown-toggle no-arrow">
+							<a href="<?= route_to('student') ?>" class="dropdown-toggle no-arrow">
 								<span class="mtext">Student</span>
 							</a>
 						</li>
 
 						<li>
-							<a href="<?= route_to('upload-sf1') ?>" class="dropdown-toggle no-arrow">
+							<a href="<?= route_to('upload.sf1') ?>" class="dropdown-toggle no-arrow">
 								<span class="mtext">Upload SF1</span>
 							</a>
 						</li>

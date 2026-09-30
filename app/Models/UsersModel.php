@@ -13,6 +13,7 @@ class UsersModel extends Model
         'email',
         'role',
         'password',
-        'status'
+        'status',
+        'profile_id'
     ];
 }

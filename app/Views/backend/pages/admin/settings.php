@@ -34,15 +34,11 @@
                 <a class="nav-link" data-toggle="tab" href="#logo_favicon" role="tab" aria-selected="false">Logo and
                     Favicon</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#social_media" role="tab" aria-selected="false">Social
-                    Media</a>
-            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="general_settings" role="tabpanel">
                 <div class="pd-20">
-                    <form action="<?= route_to('update-general-settings') ?>" method="post" id="general_settings_form">
+                    <form action="<?= route_to('post.update.settings') ?>" method="post" id="general_settings_form">
                         <input type="hidden" name="<?= csrf_token(); ?>" value="<?= csrf_hash(); ?>"
                             class="ci_csrf_data">
                         <div class="row">
@@ -93,6 +89,7 @@
                                         data-select2-id="1" tabindex="-1" aria-hidden="true">
 
                                     </select>
+                                    <span class="text-danger error-text schoolyear_error"></span>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +132,7 @@
                                     id="logo-image">
 
                             </div>
-                            <form action="<?= route_to('update-logo') ?>" method="post" enctype="mulitpart/form-data"
+                            <form action="<?= route_to('update.logo') ?>" method="post" enctype="mulitpart/form-data"
                                 id="change_logo_form">
                                 <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>"
                                     class="ci_csrf_data">
@@ -153,7 +150,7 @@
                             <div class="mb-2 mt-1" style="max-width:100px" id="favicon_image_preview">
                                 <img src="/images/settings/<?= get_settings()->favicon ?>" alt="" srcset="">
                             </div>
-                            <form action="<?= route_to('update-favicon') ?>" method="post" id="change_favicon_form"
+                            <form action="<?= route_to('update.favicon') ?>" method="post" id="change_favicon_form"
                                 enctype="multipart/form-data">
                                 <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
                                 <div class="form-group">
@@ -166,65 +163,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane fade" id="social_media" role="tabpanel">
-                <div class="pd-20">
-                    <form action="<?= route_to('update-social-media') ?>" method="post" id="social_media_form">
-                        <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" class="ci_csrf_data">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="facebook">Facebook URL</label>
-                                    <input type="text" name="facebook_url" id="facebook_url" class="form-control"
-                                        placeholder="Enter facebook url" value="<?= get_socialmedia()->facebook_url ?>">
-                                    <span class="text-danger error-text facebook_url_error"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="facebook">Youtube URL</label>
-                                    <input type="text" name="youtube_url" id="youtube_url" class="form-control"
-                                        placeholder="Enter youtube url" value="<?= get_socialmedia()->youtube_url ?>">
-                                    <span class="text-danger error-text youtube_url_error"></span>
-                                </div>
-
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="facebook">Twitter URL</label>
-                                    <input type="text" name="twitter_url" id="twitter_url" class="form-control"
-                                        placeholder="Enter twitter url" value="<?= get_socialmedia()->twitter_url ?>">
-                                    <span class="text-danger error-text twitter_url_error"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="facebook">GitHub URL</label>
-                                    <input type="text" name="github_url" id="github_url" class="form-control"
-                                        placeholder="Enter github url" value="<?= get_socialmedia()->github_url ?>">
-                                    <span class="text-danger error-text github_url_error"></span>
-                                </div>
-
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="facebook">Instagram URL</label>
-                                    <input type="text" name="instagram_url" id="instagram_url" class="form-control"
-                                        placeholder="Enter instagram url"
-                                        value="<?= get_socialmedia()->instagram_url ?>">
-                                    <span class="text-danger error-text instagram_url_error"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="facebook">LinkedIn URL</label>
-                                    <input type="text" name="linkedin_url" id="linkedin_url" class="form-control"
-                                        placeholder="Enter LinkedIn url" value="<?= get_socialmedia()->linkedin_url ?>">
-                                    <span class="text-danger error-text linkedin_url_error"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Update Social Media</button>
-                    </form>
-                </div>
-
             </div>
         </div>
     </div>
@@ -260,14 +198,14 @@
                 //console.log(response);
 
                 $('.ci_csrf_data').val(response.token);
-                if ($.isEmptyObject(response.error)) {
+                if ($.isEmptyObject(response.errors)) {
                     if (response.status == 1) {
                         toastr.success(response.msg);
                     } else {
                         toastr.error(response.msg);
                     }
                 } else {
-                    $.each(response.error, function (prefix, val) {
+                    $.each(response.errors, function (prefix, val) {
                         $(form).find('span.' + prefix + '_error').text(val);
                     });
                 }

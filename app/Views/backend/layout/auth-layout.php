@@ -8,7 +8,7 @@
 
 	<!-- Site favicon -->
 
-	
+
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -30,7 +30,7 @@
 		<div class="container-fluid d-flex justify-content-between align-items-center">
 			<div class="brand-logo">
 				<a href="login.html">
-					<img src="/images/settings/<?= get_settings()->logo ?>" alt="" />
+					<img src="/images/settings/<?= get_settings()->logo ?>" alt="" style="height:50px; width:50px;" />
 				</a>
 			</div>
 			<div class="login-menu">

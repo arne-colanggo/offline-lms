@@ -134,7 +134,7 @@
                                                 <div class="input-group">
                                                     <input class="form-control" type="text" id="barangay"
                                                         name="barangay" readonly
-                                                        value="<?= isset($profile) ? $profile->address->barangay_name : '' ?>">
+                                                        value="<?= isset($profile->address) ? $profile->address->barangay_name : '' ?>">
 
                                                     <div class="input-group-append">
                                                         <button type="button" class="btn btn-primary" id="btnBarangay"
@@ -150,14 +150,14 @@
                                                 <label>Municipality</label>
                                                 <input class="form-control form-control-lg" type="text"
                                                     id="municipality" name="municipality" readonly
-                                                    value="<?= isset($profile) ? $profile->address->municipality_name : '' ?>">
+                                                    value="<?= isset($profile->address) ? $profile->address->municipality_name : '' ?>">
                                                 <span class="text-danger error-text barangay_id_error"></span>
                                             </div>
                                             <div class="form-group">
                                                 <label>Province</label>
                                                 <input class="form-control form-control-lg" type="text" id="province"
                                                     name="province"
-                                                    value="<?= isset($profile) ? $profile->address->province_name : '' ?>"
+                                                    value="<?= isset($profile->address) ? $profile->address->province_name : '' ?>"
                                                     readonly>
                                                 <span class="text-danger error-text barangay_id_error"></span>
                                             </div>

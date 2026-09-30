@@ -6,8 +6,7 @@ class AuthenticationServices
     {
         $session = session();
         $array = ['logged_in' => true];
-        $userdata = $result;
-        $session->set('userdata', $userdata);
+        $session->set('userdata', $result);
         $session->set($array);
     }
 

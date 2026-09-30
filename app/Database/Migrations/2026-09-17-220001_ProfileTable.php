@@ -80,7 +80,8 @@ class ProfileTable extends Migration
             'deleted' => [
                 'type' => 'ENUM',
                 'constraint' => ['F', 'T'],
-                'default' => 'F'
+                'default' => 'F',
+                'null' => true
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',

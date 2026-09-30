@@ -241,10 +241,10 @@ class AuthController extends BaseController
 
             } else if ($user['role'] === 'teacher') {
                 //Go to Dashboard teacher
-
+                return redirect()->route('admin.dashboard');
             } else {
                 //Go to Dashboard student
-
+                return redirect()->route('admin.dashboard');
             }
         }
     }
@@ -252,11 +252,12 @@ class AuthController extends BaseController
     public function profile()
     {
 
-        $user = session('userdata');
+        $session = session();
+        $user = $session->get('userdata');
         $user_profile = new ProfileModel();
-        $profile_data = $user_profile->asObject()->where('id', $user['id'])->first();
+        $profile_data = $user_profile->asObject()->where('id', $user['profile_id'])->first();
         $profile_data->userdata = $user;
-        $profile_data->address = get_address($profile_data->addressid);
+        $profile_data->address = ($profile_data->addressid > 0) ? get_address($profile_data->addressid) : null;
         return $profile_data;
 
 

@@ -18,9 +18,10 @@ if (!function_exists('get_user')) {
 if (!function_exists('get_address')) {
     function get_address($id)
     {
+
         $db = db_connect();
         $address = $db->query('SELECT b.barangay_name, m.municipality_name, p.province_name FROM provinces p JOIN municipalities m ON m.province_id = p.province_id JOIN barangays b ON b.municipality_id = m.municipality_id WHERE b.barangay_id=' . $id);
-        if ($address) {
+        if (is_array($address)) {
             return $address->getResultObject()[0];
         }
         return null;
@@ -52,7 +53,6 @@ if (!function_exists('get_settings')) {
 }
 
 
-
 if (!function_exists('splitFullName')) {
 
     function splitFullName($fullName)
@@ -73,7 +73,7 @@ if (!function_exists('splitFullName')) {
         //$middleName = array_pop($nameParts);
 
         $name_middle = array_pop($nameParts);
-        $nameMiddleParts = explode(" ", $name_middle);
+        $nameMiddleParts = explode(",", $name_middle);
 
         $middleName = array_pop($nameMiddleParts);
 
@@ -81,8 +81,8 @@ if (!function_exists('splitFullName')) {
         $lastName = array_shift($nameParts);
 
         // firstname name is the remaining part
-        //$firstName = implode(" ", $nameParts);
-        $firstName = implode(" ", $nameMiddleParts);
+        $firstName = implode(" ", $nameParts);
+        //$firstName = implode(",", $nameMiddleParts);
 
         return [
             'first_name' => $firstName,

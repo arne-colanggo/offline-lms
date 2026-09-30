@@ -34,7 +34,19 @@ $routes->group('admin', function ($routes) {
         $routes->post('change-credentials', 'Api\UserController::changeCredentials', ['as' => 'post.user.change.credentials']);
 
         $routes->get('settings', 'Api\UserController::settings', ['as' => 'settings']);
+        $routes->post('post-update-settings', 'Api\AdminController::updateGeneralSettings', ['as' => 'post.update.settings']);
+        $routes->post('update-logo', 'Api\AdminController::updateLogo', ['as' => 'update.logo']);
+        $routes->post('update-favicon', 'Api\AdminController::updateFavicon', ['as' => 'update.favicon']);
+        $routes->get('student-list', 'Api\StudentController::studentsList', ['as' => 'student.list']);
+        $routes->get('student', 'Api\StudentController::viewStudent', ['as' => 'student']);
+        $routes->get('student-profile', 'Api\StudentController::student', ['as' => 'student.profile']);
 
+        // Student
+
+        $routes->get('student-profile', 'Api\StudentController::student', ['as' => 'student.profile']);
+        $routes->post('post-student-profile', 'Api\StudentController::postStudent', ['as' => 'post.student.profile']);
+        $routes->get('upload-sf1', 'Api\StudentController::uploadSF1', ['as' => 'upload.sf1']);
+        $routes->post('post-upload-sf1', 'Api\StudentController::postUploadSF1', ['as' => 'post.upload.sf1']);
         // Address Controller
 
         $routes->get('regions', 'Api\AddressController::regions', ['as' => 'get.regions']);

@@ -31,6 +31,11 @@
 		.swal2-popup {
 			font-size: .60em;
 		}
+
+		.required::after {
+			content: ' *';
+			color: red;
+		}
 	</style>
 	<?= $this->renderSection('stylesheets') ?>
 </head>
