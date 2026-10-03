@@ -10,6 +10,15 @@ class Home extends BaseController
         $data = [
             'pageTitle' => 'Home'
         ];
-        return view('backend/pages/admin/home', $data);
+        $session = session();
+
+        if ($session->get('userdata')) {
+
+            return view('backend/pages/admin/home', $data);
+
+        } else {
+            return view('backend/pages/auth/login', $data);
+        }
+
     }
 }

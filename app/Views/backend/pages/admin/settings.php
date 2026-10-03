@@ -82,15 +82,29 @@
                             </div>
 
                             <div class="col-md-4">
+
+
+
                                 <div class="form-group" data-select2-id="36">
-                                    <label>School Year</label>
+
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+
+                                        <label class="mb-0">
+                                            School Year
+                                        </label>
+
+                                    </div>
+
                                     <select class="custom-select2 form-control select2-hidden-accessible"
                                         name="schoolyear" id="schoolyear" style="width: 100%; height: 38px"
                                         data-select2-id="1" tabindex="-1" aria-hidden="true">
 
                                     </select>
+
                                     <span class="text-danger error-text schoolyear_error"></span>
+
                                 </div>
+
                             </div>
                         </div>
                         <div class="row">
@@ -168,6 +182,7 @@
     </div>
 </div>
 
+
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
@@ -216,23 +231,6 @@
     });
 
 
-
-    // $('input[type="file"][name="blog_logo"]').on('change', function (e) {
-    //     const file = e.target.files[0];
-
-    //     if (file) {
-    //         const reader = new FileReader();
-
-    //         reader.onload = function (e) {
-    //             const imageUrl = e.target.result;
-    //             //openImageModal(imageUrl);
-
-    //             $('#img-holder').html(`<img src="${imageUrl}" alt="Image">`);
-    //         };
-
-    //         reader.readAsDataURL(file);
-    //     }
-    // });
 
     $('input[type="file"][name="favicon"]').on('change', function (e) {
         const file = e.target.files[0];
@@ -378,8 +376,11 @@
 
     });
 
+    // School Year
+
     $(document).ready(function (e) {
-        var url_schoolyear = '<?= route_to('get-parent-school-year'); ?>';
+
+        var url_schoolyear = '<?= route_to('get.cboschoolyear'); ?>';
         var select = $('#schoolyear');
         $.get(url_schoolyear, function (response) {
             select.find('option').remove();

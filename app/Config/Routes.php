@@ -7,6 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Api\AuthController::loginform');
+$routes->get('unauthorized', 'Api\AuthController::unauthorized');
+
 // app/Config/Routes.php
 
 $routes->group('admin', function ($routes) {
@@ -15,7 +17,6 @@ $routes->group('admin', function ($routes) {
     // PUBLIC ROUTES
     // =========================
     $routes->post('login', 'Api\AuthController::loginhandler', ['as' => 'admin.login.handler']);
-    $routes->get('unauthorized', 'Api\AuthController::unauthorized');
 
     // =========================
     // AUTHENTICATED ROUTES
@@ -40,6 +41,25 @@ $routes->group('admin', function ($routes) {
         $routes->get('student-list', 'Api\StudentController::studentsList', ['as' => 'student.list']);
         $routes->get('student', 'Api\StudentController::viewStudent', ['as' => 'student']);
         $routes->get('student-profile', 'Api\StudentController::student', ['as' => 'student.profile']);
+        //School Year ---
+        $routes->post('post-school-year', 'Api\AdminController::postSchoolYear', ['as' => 'post.schoolyear']);
+        $routes->get('get-cboschoolyear', 'Api\AdminController::getcboSchoolYear', ['as' => 'get.cboschoolyear']);
+        $routes->get('get-schoolyear', 'Api\AdminController::getSchoolYear', ['as' => 'get.schoolyear']);
+        $routes->get('schoolyear', 'Api\AdminController::schoolyear', ['as' => 'schoolyear']);
+        $routes->get('schoolyears', 'Api\AdminController::getSchoolYears', ['as' => 'get.schoolyears']);
+        $routes->post('update-schoolyear', 'Api\AdminController::updateSchoolYear', ['as' => 'update.schoolyear']);
+        $routes->get('delete-schoolyear', 'Api\AdminController::deleteSchoolYear', ['as' => 'delete.schoolyear']);
+        //Grade Level ---
+        $routes->get('gradelevel', 'Api\AdminController::gradelevel', ['as' => 'gradelevel']);
+        $routes->get('get-gradelevels', 'Api\AdminController::getGradeLevels', ['as' => 'get.gradelevels']);
+        $routes->post('post-gradelevels', 'Api\AdminController::postGradeLevel', ['as' => 'post.gradelevel']);
+        $routes->get('get-gradelevel', 'Api\AdminController::getGradeLevel', ['as' => 'get.gradelevel']);
+        $routes->post('update-gradelevel', 'Api\AdminController::updateGradeLevel', ['as' => 'update.gradelevel']);
+        $routes->get('delete-gradelevel', 'Api\AdminController::deleteGradeLevel', ['as' => 'delete.gradelevel']);
+
+        //Section ---
+
+
 
         // Student
 

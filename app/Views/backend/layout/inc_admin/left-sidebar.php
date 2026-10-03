@@ -29,7 +29,7 @@
 					</a>
 					<ul class="submenu ">
 						<li>
-							<a href="<?= route_to('grade-level') ?>" class="dropdown-toggle no-arrow">
+							<a href="<?= route_to('gradelevel') ?>" class="dropdown-toggle no-arrow">
 								<span class="mtext">Grade Level</span>
 							</a>
 						</li>

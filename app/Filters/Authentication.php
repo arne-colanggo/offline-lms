@@ -27,7 +27,7 @@ class Authentication implements FilterInterface
     {
         //
         if (!AuthenticationServices::check()) {
-            return redirect()->route('api/unauthorized')->with('fail', 'You must be logged in first!');
+            return redirect()->route('unauthorized')->with('fail', 'You must be logged in first!');
         }
     }
 

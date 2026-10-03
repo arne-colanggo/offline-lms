@@ -304,100 +304,100 @@ class StudentController extends BaseController
         $request = \Config\Services::request();
         if ($request->isAJAX()) {
             $validation = \Config\Services::validation();
-
-            $this->validate([
-                'data' => [
-                    'rules' => 'required',
-                    'errors' => [
-                        'required' => 'Record must not empty',
+            if (!empty($request->getVar('data'))) {
+                $this->validate([
+                    'data' => [
+                        'rules' => 'required',
+                        'errors' => [
+                            'required' => 'Record must not empty',
+                        ]
                     ]
-                ]
-            ]);
+                ]);
 
-            if ($validation->run() === FALSE) {
-                return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'error' => $validation->getErrors()]);
-            } else {
-                $students = new StudentModel();
-                $profile = new ProfileModel();
-                $users = new UsersModel();
-                $data = array();
-                $data = json_decode($request->getVar('data'));
-
-
-                foreach ($data as $key => $value) {
-                    $name = splitFullName($value[1]);
-                    $LastName = $name['last_name'];
-                    $FirstName = $name['first_name'];
-                    $MiddleName = $name['middle_name'];
-
-                    $date = date_create($value[3]);
-
-                    if ($date !== false) {
-                        $myDateTime = $date->format('Y-m-d');
-                    } else {
-                        $myDateTime = null; // or handle the error
-                    }
-
-
-
-                    //check first if lrn is already exist
-
-                    $exist_lrn = $students->asObject()->where('lrn', $value[0])->first();
-
-                    if ($exist_lrn) {
-                        //update already exist
-
-                    } else {
-                        $save = $profile->save([
-                            'firstname' => $FirstName,
-                            'middlename' => $MiddleName,
-                            'lastname' => $LastName,
-                            'gender' => $value[2],
-                            'dateofbirth' => $myDateTime,
-                            'street' => $value[8],
-                            'religion' => $value[7],
-                        ]);
-                        $profile_id = $profile->getInsertID();
-                        if ($profile_id) {
-
-                            $students->save([
-                                'lrn' => $value[0],
-                                'fathersname' => $value[12],
-                                'mothersname' => $value[13],
-                                'guardiansname' => $value[14],
-                                'relationship' => $value[15],
-                                'guardian_parent_contact' => $value[16],
-                                'profile_id' => $profile_id
-
-                            ]);
-
-                            $users->save([
-                                'username' => $value[0],
-                                'email' => $value[0] . "@deped.gov.ph",
-                                'password' => password_hash($value[0], PASSWORD_BCRYPT),
-                                'role' => 'student',
-                                'status' => 1,
-                                'profile_id' => $profile_id
-                            ]);
-
-
-                        }
-                    }
-
-                }
-
-
-                if ($save) {
-                    return $this->response->setJSON(['status' => 1, 'token' => csrf_hash(), 'msg' => 'Student Added']);
-
+                if ($validation->run() === FALSE) {
+                    return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'error' => $validation->getErrors()]);
                 } else {
-                    return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'msg' => 'Something is wrong']);
+                    $students = new StudentModel();
+                    $profile = new ProfileModel();
+                    $users = new UsersModel();
+                    $data = array();
+                    $data = json_decode($request->getVar('data'));
+
+
+                    foreach ($data as $key => $value) {
+                        $name = splitFullName($value[1]);
+                        $LastName = $name['last_name'];
+                        $FirstName = $name['first_name'];
+                        $MiddleName = $name['middle_name'];
+
+                        $date = date_create($value[3]);
+
+                        if ($date !== false) {
+                            $myDateTime = $date->format('Y-m-d');
+                        } else {
+                            $myDateTime = null; // or handle the error
+                        }
+
+
+
+                        //check first if lrn is already exist
+
+                        $exist_lrn = $students->asObject()->where('lrn', $value[0])->first();
+
+                        if ($exist_lrn) {
+                            //update already exist
+
+                        } else {
+                            $save = $profile->save([
+                                'firstname' => $FirstName,
+                                'middlename' => $MiddleName,
+                                'lastname' => $LastName,
+                                'gender' => $value[2],
+                                'dateofbirth' => $myDateTime,
+                                'street' => $value[8],
+                                'religion' => $value[7],
+                            ]);
+                            $profile_id = $profile->getInsertID();
+                            if ($profile_id) {
+
+                                $students->save([
+                                    'lrn' => $value[0],
+                                    'fathersname' => $value[12],
+                                    'mothersname' => $value[13],
+                                    'guardiansname' => $value[14],
+                                    'relationship' => $value[15],
+                                    'guardian_parent_contact' => $value[16],
+                                    'profile_id' => $profile_id
+
+                                ]);
+
+                                $users->save([
+                                    'username' => $value[0],
+                                    'email' => $value[0] . "@deped.gov.ph",
+                                    'password' => password_hash($value[0], PASSWORD_BCRYPT),
+                                    'role' => 'student',
+                                    'status' => 1,
+                                    'profile_id' => $profile_id
+                                ]);
+
+
+                            }
+                        }
+
+                    }
+
+                    if (isset($save)) {
+                        return $this->response->setJSON(['status' => 1, 'token' => csrf_hash(), 'msg' => 'Student Added']);
+                    } else {
+                        return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'msg' => 'Something is wrong']);
+
+                    }
 
                 }
 
+            } else {
+                return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'msg' => 'No Record to save!']);
             }
-
-
         }
     }
 }

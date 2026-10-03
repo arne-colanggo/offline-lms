@@ -24,12 +24,13 @@ class AuthController extends BaseController
 
     public function unauthorized()
     {
-        return $this->response
-            ->setStatusCode(401)
-            ->setJSON([
-                'success' => false,
-                'message' => 'Invalid Email or Password'
-            ]);
+        return redirect()->route('/')->with('fail', 'Anauthorized');
+        // return $this->response
+        //     ->setStatusCode(401)
+        //     ->setJSON([
+        //         'success' => false,
+        //         'message' => 'Invalid Email or Password'
+        //     ]);
     }
     public function loginform()
     {
@@ -37,8 +38,25 @@ class AuthController extends BaseController
             'pageTitle' => 'Login',
             'validation' => null
         ];
+        //check if the status is login
+        $session = session();
 
-        return view('backend/pages/auth/login', $data);
+        if ($session->get('userdata')) {
+            $user = $session->get('userdata');
+            if ($user['role'] === 'admin') {
+                return redirect()->route('admin.dashboard');
+
+            } else if ($user['role'] === 'teacher') {
+                //Go to Dashboard teacher
+                return redirect()->route('admin.dashboard');
+            } else {
+                //Go to Dashboard student
+                return redirect()->route('admin.dashboard');
+            }
+        } else {
+            return view('backend/pages/auth/login', $data);
+        }
+
     }
     public function loginhandler_bck()
     {
@@ -232,7 +250,7 @@ class AuthController extends BaseController
             }
 
             if (!password_verify($password, $user['password'])) {
-                return redirect()->route('login')->with('fail', 'Wrong password');
+                return redirect()->route('/')->with('fail', 'Wrong password');
             }
             $this->AuthServices::setAuthorized($user);
             // Check if the user role [admin, teacher, student]
