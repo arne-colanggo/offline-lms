@@ -18,7 +18,7 @@ $routes->group('admin', function ($routes) {
     // =========================
     $routes->post('login', 'Api\AuthController::loginhandler', ['as' => 'admin.login.handler']);
 
-    // =========================
+    // ========================= 
     // AUTHENTICATED ROUTES
     // =========================
     $routes->group('', ['filter' => 'auth'], function ($routes) {
@@ -56,11 +56,15 @@ $routes->group('admin', function ($routes) {
         $routes->get('get-gradelevel', 'Api\AdminController::getGradeLevel', ['as' => 'get.gradelevel']);
         $routes->post('update-gradelevel', 'Api\AdminController::updateGradeLevel', ['as' => 'update.gradelevel']);
         $routes->get('delete-gradelevel', 'Api\AdminController::deleteGradeLevel', ['as' => 'delete.gradelevel']);
+        $routes->get('get-parent-gradelevel', 'Api\AdminController::getParentGradeLevel', ['as' => 'get.parent.gradelevel']);
+        $routes->post('update-section', 'Api\AdminController::updateSection', ['as' => 'update.section']);
+        $routes->get('delete-section', 'Api\AdminController::deleteSection', ['as' => 'delete.section']);
 
         //Section ---
-
-
-
+        $routes->get('section', 'Api\AdminController::section', ['as' => 'section']);
+        $routes->get('get-sections', 'Api\AdminController::getSections', ['as' => 'get.sections']);
+        $routes->post('post-section', 'Api\AdminController::postSection', ['as' => 'post.section']);
+        $routes->get('get-section', 'Api\AdminController::getSection', ['as' => 'get.section']);
         // Student
 
         $routes->get('student-profile', 'Api\StudentController::student', ['as' => 'student.profile']);

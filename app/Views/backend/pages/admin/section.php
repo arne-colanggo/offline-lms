@@ -40,26 +40,29 @@
                 </div>
             </div>
             <div class="card-body">
-                <table class="table table-sm table-borderless table-hover table-striped" id="section_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Grade Level</th>
-                            <th scope="col">Enrolled </th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-sm table-borderless table-hover table-striped" id="section_table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Grade Level</th>
+                                <th scope="col">Enrolled </th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
 
+<?= view('backend/pages/modal/add_section_modal.php') ?>
+<?= view('backend/pages/modal/edit_section_modal.php') ?>
 
-<?php include('modal/add_section_modal.php'); ?>
-<?php include('modal/edit_section_modal.php'); ?>
 <!-- #end grade level -->
 <?= $this->endSection() ?>
 <?= $this->section('stylesheets') ?>
@@ -67,7 +70,7 @@
 <link rel="stylesheet" href="/backend/src/plugins/datatables/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="/extra-assets/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.css">
 <link rel="stylesheet" href="/extra-assets/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.min.css">
-<link rel="stylesheet" href="\extra-assets\jquery-ui-1.13.2\jquery-ui-1.13.2\jquery-ui.theme.min.css">
+<link rel="stylesheet" href="/extra-assets/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.min.css">
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
@@ -88,7 +91,7 @@
         var modal_btn_text = 'ADD';
 
         var select = modal.find('select[name="parent_grade_level"]');
-        var url = '<?= route_to('get-parent-grade-level') ?>';
+        var url = '<?= route_to('get.parent.gradelevel') ?>';
         $.getJSON(url, { parent_grade_level_id: null }, function (response) {
             select.find('option').remove();
             select.html(response.data);
@@ -157,7 +160,7 @@
     var Section_DT = $('#section_table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "<?= route_to('get-sections'); ?>",
+        ajax: "<?= route_to('get.sections'); ?>",
         dom: "Bfrtip",
         info: true,
         fnCreatedRow: function (row, data, index) {
@@ -173,8 +176,8 @@
         e.preventDefault();
 
         var id = $(this).attr('data-id');
-        var url = "<?= route_to('get-section') ?>";
-        var get_parent_grade_url = '<?= route_to('get-parent-grade-level') ?>';
+        var url = "<?= route_to('get.section') ?>";
+        var get_parent_grade_url = '<?= route_to('get.parent.gradelevel') ?>';
 
         $.get(url, { 'section_id': id }, function (response) {
             var modal_title = "Edit Section";
@@ -253,7 +256,7 @@
         e.preventDefault();
 
         var id = $(this).data('id');
-        var url = "<?= route_to('delete-section'); ?>";
+        var url = "<?= route_to('delete.section'); ?>";
         swal({
             title: "Are you sure?",
             html: "You want tod delete this Section?",

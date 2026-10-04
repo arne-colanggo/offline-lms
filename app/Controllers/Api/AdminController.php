@@ -7,6 +7,7 @@ use App\Models\SchoolYear;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\SettingsModel;
 use App\Models\GradeLevel;
+use App\Models\Sections;
 use SSP;
 class AdminController extends BaseController
 {
@@ -462,6 +463,213 @@ class AdminController extends BaseController
 
             if ($delete) {
                 return $this->response->setJSON(['status' => 1, 'msg' => 'Grade level deleted successfully!']);
+            } else {
+                return $this->response->setJSON(['status' => 0, 'msg' => 'Action Failed!']);
+            }
+        }
+    }
+
+    function getParentGradeLevel()
+    {
+        $request = \Config\Services::request();
+
+        if ($request->isAJAX()) {
+            $id = $request->getVar('parent_grade_level_id');
+            $gradelevel = new GradeLevel();
+            $options = '';
+            $parent_grade_level = $gradelevel->findAll();
+
+            if (count($parent_grade_level)) {
+                $added_options = '';
+                foreach ($parent_grade_level as $parent_grade) {
+                    $isSelected = $parent_grade['id'] == $id ? 'selected' : '';
+                    $added_options .= '<option value="' . $parent_grade['id'] . '" ' . $isSelected . ' >' . $parent_grade['name'] . '</option>';
+                }
+
+                $options = $options . $added_options;
+
+                return $this->response->setJSON(['status' => 1, 'data' => $options]);
+
+            } else {
+                return $this->response->setJSON(['status' => 0, 'data' => $options]);
+            }
+
+        }
+    }
+
+    public function section()
+    {
+        $data = [
+            'pageTitle' => 'Section'
+        ];
+        return view('backend/pages/admin/section', $data);
+    }
+    public function getSections()
+    {
+        $gradelevel = new GradeLevel();
+        $section = new Sections();
+        $dbDetails = array(
+            "host" => $this->db->hostname,
+            "user" => $this->db->username,
+            "pass" => $this->db->password,
+            "db" => $this->db->database,
+        );
+
+        $table = "sections";
+        $primaryKey = "id";
+
+        $columns = array(
+            array(
+                "db" => "id",
+                "dt" => 0
+            ),
+            array(
+                "db" => "name",
+                "dt" => 1
+            ),
+            array(
+                "db" => "id",
+                "dt" => 2,
+                "formatter" => function ($d, $row) use ($gradelevel, $section) {
+                    $parent_grade_id = $section->asObject()->where("id", $row['id'])->first()->grade_level_id;
+                    $grade_level_name = ' - ';
+
+                    if ($parent_grade_id != 0) {
+                        $grade_level_name = $gradelevel->asObject()->where('id', $parent_grade_id)->first()->name;
+                    }
+                    return $grade_level_name;
+                }
+            ),
+            array(
+                "db" => "id",
+                "dt" => 3,
+                "formatter" => function ($d, $row) {
+                    //$enrol = new Enrollments();
+                    $count = 0;//$enrol->asObject()->where(['sectionid' => $row['id'], 'schoolyearid' => get_settings()->schoolyear])->countAllResults();
+                    return '<div class="btn-group">
+                        <a href="' . route_to('view-enrolled-students') . '/?id=' . $row['id'] . '&sid=' . get_settings()->schoolyear . '" class="btn btn-sm btn-link mx-1 viewEnrolledBtn" data-id="' . $row['id'] . '">' . $count . '</a>
+                    </div>';
+                }
+            ),
+            array(
+                "db" => "id",
+                "dt" => 4,
+                "formatter" => function ($d, $row) {
+                    return '<div class="btn-group">
+                        <button class="btn btn-sm btn-link mx-1 editSectionBtn" data-id="' . $row['id'] . '"><i class="icon-copy dw dw-edit-file"></i></button>
+                        <button class="btn btn-sm btn-link mx-1 deleteSectionBtn" data-id="' . $row['id'] . '"><i class="icon-copy dw dw-delete-2"></i></button>
+                    </div>';
+                },
+            )
+        );
+
+        return json_encode(
+            SSP::simple($_GET, $dbDetails, $table, $primaryKey, $columns)
+        );
+    }
+
+    function postSection()
+    {
+        $request = \Config\Services::request();
+        if ($request->isAJAX()) {
+            $validation = \Config\Services::validation();
+
+            $this->validate(
+                [
+                    'section_name' => [
+                        'rules' => 'required',
+                        'errors' => [
+                            'required' => 'Section is required!'
+                        ]
+                    ],
+                    'parent_grade_level' => [
+                        'rules' => 'required',
+                        'errors' => [
+                            'required' => 'Grade Level is required'
+                        ]
+                    ]
+
+                ]
+            );
+
+            if ($validation->run() === false) {
+                $errors = $validation->getErrors();
+                return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'error' => $errors]);
+            } else {
+                $data = [
+                    'name' => $request->getVar('section_name'),
+                    'grade_level_id' => $request->getVar('parent_grade_level'),
+
+                ];
+                $section = new Sections();
+                $result = $section->insert($data);
+
+                if ($result) {
+                    return $this->response->setJSON(['status' => 1, 'token' => csrf_hash(), 'msg' => 'New Section Added!']);
+                } else {
+                    return $this->response->setJSON(['status' => 1, 'token' => csrf_hash(), 'msg' => 'Something went Wrong!']);
+                }
+            }
+        }
+    }
+    function getSection()
+    {
+        $request = \Config\Services::request();
+        if ($request->isAJAX()) {
+            $id = $request->getVar('section_id');
+            $section = new Sections();
+            $result = $section->find($id);
+            if ($result) {
+                return $this->response->setJSON(['data' => $result]);
+            }
+        }
+    }
+
+
+    function updateSection()
+    {
+        $request = \Config\Services::request();
+
+        if ($request->isAJAX()) {
+            $validation = \Config\Services::validation();
+            $id = $request->getVar('section_id');
+            $this->validate([
+                'section_name' => [
+                    'rules' => 'required|is_unique[sections.name,id,' . $id . ']',
+                    'errors' => [
+                        'required' => 'Section must not empty',
+                        'is_unique' => 'This name already exist',
+                    ]
+                ]
+            ]);
+
+            if ($validation->run() === FALSE) {
+                return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'error' => $validation->getErrors()]);
+            } else {
+                $section = new Sections();
+                $update = $section->where('id', $id)
+                    ->set(['name' => $request->getVar('section_name')])
+                    ->update();
+                if ($update) {
+                    return $this->response->setJSON(['status' => 1, 'token' => csrf_hash(), 'msg' => 'Section updated successfully!']);
+                } else {
+                    return $this->response->setJSON(['status' => 0, 'token' => csrf_hash(), 'msg' => 'Something went wrong while updating!']);
+                }
+            }
+
+        }
+    }
+
+    function deleteSection()
+    {
+        $request = \Config\Services::request();
+        if ($request->isAJAX()) {
+            $id = $request->getVar('section_id');
+            $section = new Sections();
+            $delete = $section->where('id', $id)->delete();
+
+            if ($delete) {
+                return $this->response->setJSON(['status' => 1, 'msg' => 'Section deleted successfully!']);
             } else {
                 return $this->response->setJSON(['status' => 0, 'msg' => 'Action Failed!']);
             }
