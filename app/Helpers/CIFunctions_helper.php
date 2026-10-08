@@ -19,11 +19,14 @@ if (!function_exists('get_address')) {
     function get_address($id)
     {
 
-        $db = db_connect();
-        $address = $db->query('SELECT b.barangay_name, m.municipality_name, p.province_name FROM provinces p JOIN municipalities m ON m.province_id = p.province_id JOIN barangays b ON b.municipality_id = m.municipality_id WHERE b.barangay_id=' . $id);
-        if (is_array($address)) {
-            return $address->getResultObject()[0];
+        if ($id > 0) {
+            $db = db_connect();
+            $address = $db->query('SELECT b.barangay_name, m.municipality_name, p.province_name FROM provinces p JOIN municipalities m ON m.province_id = p.province_id JOIN barangays b ON b.municipality_id = m.municipality_id WHERE b.barangay_id=' . $id)->getResultObject();
+            if (is_array($address)) {
+                return $address[0];
+            }
         }
+
         return null;
     }
 }

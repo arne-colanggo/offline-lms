@@ -1,6 +1,6 @@
 <div class="left-side-bar">
 	<div class="brand-logo">
-		<a href="<?= route_to('home') ?>">
+		<a href="<?= route_to('admin.dashboard') ?>">
 			<img src="<?= '/images/settings/' . get_settings()->logo ?>" alt="" class="dark-logo"
 				style="height:50px; width:50px;" />
 			<img src="<?= '/images/settings/' . get_settings()->logo ?>" alt="" class="light-logo"
@@ -14,7 +14,7 @@
 		<div class="sidebar-menu">
 			<ul id="accordion-menu">
 				<li>
-					<a href="<?= route_to('admin.home') ?>" class="dropdown-toggle no-arrow">
+					<a href="<?= route_to('admin.dashboard') ?>" class="dropdown-toggle no-arrow">
 						<span class="micon dw dw-home"></span><span class="mtext">Home</span>
 					</a>
 				</li>

@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div class="title">
-                <h4>Section</h4>
+                <h4>Subject</h4>
             </div>
             <nav aria-label="breadcrumb" role="navigation">
                 <ol class="breadcrumb">
@@ -15,7 +15,7 @@
                         <a href="<?= route_to('admin.home') ?>">Home</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        Section
+                        Subject
                     </li>
                 </ol>
             </nav>
@@ -31,23 +31,22 @@
             <div class="card-header">
                 <div class="clearfix">
                     <div class="pull-left">
-                        Section
+                        Subject
                     </div>
                     <div class="pull-right">
-                        <a href="" class="btn btn-default btn-sm p-0" role="button" id="add_section_btn"><i
-                                class="fa fa-plus-circle"></i> Add Section</a>
+                        <a href="" class="btn btn-default btn-sm p-0" role="button" id="add_subject_btn"><i
+                                class="fa fa-plus-circle"></i> Add Subject</a>
                     </div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-sm table-borderless table-hover table-striped" id="section_table">
+                    <table class="table table-sm table-borderless table-hover table-striped" id="subject_table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Grade Level</th>
-                                <th scope="col">Enrolled </th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -60,9 +59,9 @@
     </div>
 </div>
 
-<?= view('backend/pages/modal/add_section_modal.php') ?>
-<?= view('backend/pages/modal/edit_section_modal.php') ?>
 
+<?= view('backend/pages/modal/add_subject_modal.php'); ?>
+<?= view('backend/pages/modal/edit_subject_modal.php'); ?>
 <!-- #end grade level -->
 <?= $this->endSection() ?>
 <?= $this->section('stylesheets') ?>
@@ -84,10 +83,10 @@
 <script>
 
 
-    $('#add_section_btn').on('click', function (e) {
+    $('#add_subject_btn').on('click', function (e) {
         e.preventDefault();
-        var modal = $('body').find('div#add_section_modal');
-        var modal_title = 'Add Section';
+        var modal = $('body').find('div#add_subject_modal');
+        var modal_title = 'Add Subject';
         var modal_btn_text = 'ADD';
 
         var select = modal.find('select[name="parent_grade_level"]');
@@ -100,21 +99,20 @@
         modal.find('.modal-title').html(modal_title);
         modal.find('.modal-footer > button.action').html(modal_btn_text);
         modal.find('input[type="text"]').val('');
+        modal.find('textarea').val('');
         modal.find('span.error-text').html('');
         modal.modal('show');
 
     });
 
-
-
-    $('#add_section_form').on('submit', function (e) {
+    $('#add_subject_form').on('submit', function (e) {
         e.preventDefault();
 
         var form = this;
         var csrfName = $('.ci_csrf_data').attr('name');
         var csrfHash = $('.ci_csrf_data').val();
         var formdata = new FormData(form);
-        var modal = $('body').find('div#add_section_modal');
+        var modal = $('body').find('div#add_subject_modal');
         formdata.append(csrfName, csrfHash);
 
 
@@ -141,7 +139,7 @@
                         $(form)[0].reset();
                         modal.modal('hide');
                         toastr.success(response.msg);
-                        Section_DT.ajax.reload(null, false);
+                        Subject_DT.ajax.reload(null, false);
 
                     } else {
                         toastr.error(response.msg);
@@ -157,10 +155,10 @@
 
     });
 
-    var Section_DT = $('#section_table').DataTable({
+    var Subject_DT = $('#subject_table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "<?= route_to('get.sections'); ?>",
+        ajax: "<?= route_to('get.subjects'); ?>",
         dom: "Bfrtip",
         info: true,
         fnCreatedRow: function (row, data, index) {
@@ -168,31 +166,32 @@
 
         },
         columnDefs: [
-            { ordering: false, targets: [0, 1, 2, 3, 4] },
+            { ordering: false, targets: [0, 1, 2, 3] },
         ],
     });
 
-    $(document).on('click', '.editSectionBtn', function (e) {
+    $(document).on('click', '.editSubjectBtn', function (e) {
         e.preventDefault();
 
         var id = $(this).attr('data-id');
-        var url = "<?= route_to('get.section') ?>";
+        var url = "<?= route_to('get.subject') ?>";
         var get_parent_grade_url = '<?= route_to('get.parent.gradelevel') ?>';
 
-        $.get(url, { 'section_id': id }, function (response) {
-            var modal_title = "Edit Section";
+        $.get(url, { 'subject_id': id }, function (response) {
+            var modal_title = "Edit Subject";
             var modal_btn_text = "Save Changes";
-            var modal = $('body').find('div#edit_section_modal');
+            var modal = $('body').find('div#edit_subject_modal');
             modal.find('.modal-title').html(modal_title);
-            modal.find('input[name=section_id]').val(id);
+            modal.find('input[name=subject_id]').val(id);
             modal.find('.modal-footer > button.action').html(modal_btn_text);
             modal.find('span.error-text').text('');
 
             var select = modal.find('select[name="parent_grade_level"]');
 
-            $.getJSON(url, { 'section_id': id }, function (respsonse) {
-                modal.find('input[type="text"][name="section_name"]').val(response.data.name);
-                modal.find('form').find('intput[type="hidden"][name="grade_level_id"]').val(response.data.id);
+            $.getJSON(url, { 'subject_id': id }, function (respsonse) {
+                modal.find('input[type="text"][name="subject_name"]').val(response.data.name);
+                modal.find('textarea[name="description"]').val(response.data.description);
+                modal.find('form').find('intput[type="hidden"][name="grade_level_id"]').val(response.data.grade_level_id);
                 $.getJSON(get_parent_grade_url, { 'parent_grade_level_id': response.data.grade_level_id }, function (response) {
                     select.find('option').remove();
                     select.html(response.data);
@@ -205,11 +204,11 @@
 
     });
 
-    $('#edit_section_form').on('submit', function (e) {
+    $('#edit_subject_form').on('submit', function (e) {
         e.preventDefault();
         var csrfName = $('.ci_csrf_data').attr('name');
         var csrfHash = $('.ci_csrf_data').val();
-        var modal = $('body').find('#edit_section_modal');
+        var modal = $('body').find('#edit_subject_modal');
         var form = this;
         var formdata = new FormData(form);
         formdata.append(csrfName, csrfHash);
@@ -234,7 +233,7 @@
                         $(form)[0].reset();
                         modal.modal('hide');
                         toastr.success(response.msg);
-                        Section_DT.ajax.reload(null, false);
+                        Subject_DT.ajax.reload(null, false);
 
                     } else {
                         toastr.error(Response.msg);
@@ -252,14 +251,14 @@
     });
 
 
-    $(document).on('click', '.deleteSectionBtn', function (e) {
+    $(document).on('click', '.deleteSubjectBtn', function (e) {
         e.preventDefault();
 
         var id = $(this).data('id');
-        var url = "<?= route_to('delete.section'); ?>";
+        var url = "<?= route_to('delete-subject'); ?>";
         swal({
             title: "Are you sure?",
-            html: "You want tod delete this Section?",
+            html: "You want to delete this Subject?",
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonText: 'Cancel',
@@ -270,9 +269,9 @@
             allowOutsideClick: false,
         }).then(function (result) {
             if (result.value) {
-                $.get(url, { section_id: id }, function (response) {
+                $.get(url, { subject_id: id }, function (response) {
                     if (response.status == 1) {
-                        Section_DT.ajax.reload(null, false);
+                        Subject_DT.ajax.reload(null, false);
 
                         toastr.success(response.msg);
                     } else {

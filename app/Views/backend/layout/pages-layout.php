@@ -46,7 +46,6 @@
 	<?php include('inc_admin/header.php') ?>
 	<?php include('inc_admin/right-sidebar.php') ?>
 	<?php include('inc_admin/left-sidebar.php') ?>
-
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">

@@ -25,7 +25,7 @@ $routes->group('admin', function ($routes) {
 
         $routes->get('profile', 'Api\UserController::userProfile', ['as' => 'user.profile']);
         $routes->get('logout', 'Api\AuthController::logout', ['as' => 'admin.logout']);
-        $routes->get('dashboard', 'Home::index', ['as' => 'admin.dashboard']);
+        $routes->get('dashboard', 'Api\AdminController::index', ['as' => 'admin.dashboard']);
 
         // Users
         $routes->get('users', 'Api\UserController::index');
@@ -38,9 +38,7 @@ $routes->group('admin', function ($routes) {
         $routes->post('post-update-settings', 'Api\AdminController::updateGeneralSettings', ['as' => 'post.update.settings']);
         $routes->post('update-logo', 'Api\AdminController::updateLogo', ['as' => 'update.logo']);
         $routes->post('update-favicon', 'Api\AdminController::updateFavicon', ['as' => 'update.favicon']);
-        $routes->get('student-list', 'Api\StudentController::studentsList', ['as' => 'student.list']);
-        $routes->get('student', 'Api\StudentController::viewStudent', ['as' => 'student']);
-        $routes->get('student-profile', 'Api\StudentController::student', ['as' => 'student.profile']);
+
         //School Year ---
         $routes->post('post-school-year', 'Api\AdminController::postSchoolYear', ['as' => 'post.schoolyear']);
         $routes->get('get-cboschoolyear', 'Api\AdminController::getcboSchoolYear', ['as' => 'get.cboschoolyear']);
@@ -65,12 +63,28 @@ $routes->group('admin', function ($routes) {
         $routes->get('get-sections', 'Api\AdminController::getSections', ['as' => 'get.sections']);
         $routes->post('post-section', 'Api\AdminController::postSection', ['as' => 'post.section']);
         $routes->get('get-section', 'Api\AdminController::getSection', ['as' => 'get.section']);
+        $routes->get('view-enrolled-students', 'Api\AdminController::viewEnrolledStudents', ['as' => 'view.enrolled.students']);
+        $routes->post('post-single-enrollment', 'Api\StudentController::postSingleEnrollment', ['as' => 'post.single.enrollment']);
+        $routes->get('get-enrolled-students', 'Api\StudentController::getEnrolledStudents', ['as' => 'get.enrolled.students']);
+        $routes->get('section-dashboard', 'Api\AdminController::sectionDashboard', ['as' => 'section.dashboard']);
+        //Subject
+        $routes->get('subject', 'Api\AdminController::subject', ['as' => 'subject']);
+        $routes->get('get-subjects', 'Api\AdminController::getSubjects', ['as' => 'get.subjects']);
+        $routes->post('post-subject', 'Api\AdminController::postSubject', ['as' => 'post.subject']);
+        $routes->get('get-subject', 'Api\AdminController::getSubject', ['as' => 'get.subject']);
+        $routes->post('update-subject', 'Api\AdminController::updateSubject', ['as' => 'update.subject']);
         // Student
 
+        $routes->get('student-list', 'Api\StudentController::studentsList', ['as' => 'student.list']);
+        $routes->get('student', 'Api\StudentController::viewStudent', ['as' => 'student']);
         $routes->get('student-profile', 'Api\StudentController::student', ['as' => 'student.profile']);
         $routes->post('post-student-profile', 'Api\StudentController::postStudent', ['as' => 'post.student.profile']);
         $routes->get('upload-sf1', 'Api\StudentController::uploadSF1', ['as' => 'upload.sf1']);
         $routes->post('post-upload-sf1', 'Api\StudentController::postUploadSF1', ['as' => 'post.upload.sf1']);
+        $routes->get('batch-enroll-student-section', 'Api\StudentController::batchEnrollStudentSection', ['as' => 'batch.enroll.student.section']);
+        $routes->post('post-batch-enroll-student-section', 'Api\StudentController::postBatchEnrollStudentSections', ['as' => 'post.batch.enroll.student.section']);
+        $routes->get('upload-student-attendance-section', 'Api\StudentController::uploadAttendanceBySection', ['as' => 'upload.student.attendance.section']);
+        $routes->post('upload-attendance', 'Api\AdminController::uploadAttendance', ['as' => 'post.upload.attendance']);
         // Address Controller
 
         $routes->get('regions', 'Api\AddressController::regions', ['as' => 'get.regions']);

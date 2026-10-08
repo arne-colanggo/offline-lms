@@ -31,7 +31,7 @@
             <div class="card-header">
                 <div class="clearfix">
                     <div class="pull-left">
-                        Section
+                        List of Students
                     </div>
                     <div class="pull-right">
                         <a href="<?= route_to('student.profile') ?>" class="btn btn-default btn-sm p-0 mr-10"
