@@ -28,6 +28,11 @@ class SectionTable extends Migration
                 'null' => false,
                 'unsigned' => true
             ],
+            'teacherid' => [
+                'type' => 'INT',
+                'unsigned' => true,
+                'null' => true
+            ],
             'ordering' => [
                 'type' => 'INT',
                 'constraint' => 5,

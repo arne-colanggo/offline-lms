@@ -25,6 +25,26 @@ class SchoolSettings extends Migration
                 'constraint' => 255,
                 'null' => true
             ],
+            'region' => [
+                'type' => 'VARCHAR',
+                'constraint' => 50,
+                'null' => true
+            ],
+            'division' => [
+                'type' => 'VARCHAR',
+                'constraint' => 150,
+                'null' => true
+            ],
+            'district' => [
+                'type' => 'VARCHAR',
+                'constraint' => 150,
+                'null' => true
+            ],
+            'schoolid' => [
+                'type' => 'VARCHAR',
+                'constraint' => 50,
+                'null' => true
+            ],
             'phone' => [
                 'type' => 'VARCHAR',
                 'constraint' => 12,

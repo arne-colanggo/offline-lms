@@ -259,10 +259,10 @@ class AuthController extends BaseController
 
             } else if ($user['role'] === 'teacher') {
                 //Go to Dashboard teacher
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('teacher.home');
             } else {
                 //Go to Dashboard student
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('student.home');
             }
         }
     }

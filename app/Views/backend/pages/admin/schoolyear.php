@@ -40,16 +40,19 @@
                 </div>
             </div>
             <div class="card-body">
-                <table class="table table-sm table-borderless table-hover table-striped" id="school_year_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered w-100" id="school_year_table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>

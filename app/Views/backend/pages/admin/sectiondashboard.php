@@ -244,7 +244,8 @@
 <?= $this->section('scripts') ?>
 <script src="/backend/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/backend/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="/backend/src/scripts/chart.umd.min.js"></script>
+
 
 <script>
     const trend = <?= json_encode($trend) ?>;

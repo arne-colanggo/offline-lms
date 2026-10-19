@@ -334,13 +334,16 @@ class AdminController extends BaseController
 
     public function gradelevel()
     {
+        $s = new GradeLevel();
         $data = [
-            'pageTitle' => 'Grade Level'
+            'pageTitle' => 'Grade Level',
+            'stat' => $s->gradeLevelStatistic()
         ];
         return view('backend/pages/admin/gradelevel', $data);
     }
     public function getGradeLevels()
     {
+
         $dbDetails = array(
             "host" => $this->db->hostname,
             "user" => $this->db->username,
@@ -361,8 +364,26 @@ class AdminController extends BaseController
                 "dt" => 1
             ),
             array(
-                "db" => "id",
+                "db" => 'id',
                 "dt" => 2,
+                "formatter" => function ($d, $row) {
+                    $g = new GradeLevel();
+                    $data = $g->getPerGradeLevelEnrollment($row['id']);
+                    return '<div><span  class="badge bg-warning text-white badge-pill"> ' . $data->total_enrolled . '</span>  Total Enrollees  <div class="font-12 text-muted"> Males ' . $data->total_males . '&middot; Females ' . $data->total_females . '</div></div>';
+                }
+            ),
+            array(
+                "db" => "id",
+                "dt" => 3,
+                "formatter" => function ($d, $row) {
+                    $s = new GradeLevel();
+                    $d = $s->sectionsPerGradeLevel($row['id']);
+                    return '<div class="text-center"><span class="badge text-white bg-primary badge-pill">' . $d[0]->totalsections . ' Sections </span></div>';
+                }
+            ),
+            array(
+                "db" => "id",
+                "dt" => 4,
                 "formatter" => function ($d, $row) {
                     return '<div class="btn-group">
                         <button class="btn btn-sm btn-link mx-1 editGradeLevelBtn" data-id="' . $row['id'] . '"><i class="icon-copy dw dw-edit-file"></i></button>
@@ -503,11 +524,17 @@ class AdminController extends BaseController
 
         }
     }
-
+    public function teachersList()
+    {
+        $teachers = new Sections();
+        return $this->response->setJSON(['teachers' => $teachers->getListofTeachers()]);
+    }
     public function section()
     {
+        $sec_ad = new Sections();
         $data = [
-            'pageTitle' => 'Section'
+            'pageTitle' => 'Section',
+            'advisers' => $sec_ad->getListofTeachers()
         ];
         return view('backend/pages/admin/section', $data);
     }
@@ -1049,22 +1076,41 @@ class AdminController extends BaseController
                 $weekday[$map[$r->dow]] = (int) $r->n;
         }
 
+        if (get_user()->userdata['role'] === 'admin') {
+            return view('backend/pages/admin/sectiondashboard', compact(
+                'section',
+                'learners',
+                'totalEnrolled',
+                'male',
+                'female',
+                'frequent',
+                'bands',
+                'attendanceRate',
+                'lastDate',
+                'trend',
+                'weekday',
+                'threshold',
+                'pageTitle'
+            ));
+        } elseif (get_user()->userdata['role'] === 'teacher') {
+            return view('backend/pages/teacher/advisory', compact(
+                'section',
+                'learners',
+                'totalEnrolled',
+                'male',
+                'female',
+                'frequent',
+                'bands',
+                'attendanceRate',
+                'lastDate',
+                'trend',
+                'weekday',
+                'threshold',
+                'pageTitle'
+            ));
+        }
 
-        return view('backend/pages/admin/sectiondashboard', compact(
-            'section',
-            'learners',
-            'totalEnrolled',
-            'male',
-            'female',
-            'frequent',
-            'bands',
-            'attendanceRate',
-            'lastDate',
-            'trend',
-            'weekday',
-            'threshold',
-            'pageTitle'
-        ));
+
     }
     public function uploadAttendance()
     {
@@ -1275,7 +1321,7 @@ class AdminController extends BaseController
 
         // ---- Frequent absentees (school-wide) ----
         $frequent = $db->table('attendances a')
-            ->select('st.lrn, pr.firstname, pr.lastname, s.name AS section_name, gl.name AS grade_name, COUNT(*) AS absences')
+            ->select('st.lrn, pr.firstname, pr.lastname, s.name AS section_name, gl.name AS grade_name, COUNT(DISTINCT a.classdate) AS absences')
             ->join('students st', 'st.id = a.studentid')
             ->join('profiles pr', 'pr.id = st.profile_id')
             ->join('sections s', 's.id = a.sectionid')

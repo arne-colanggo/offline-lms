@@ -12,6 +12,10 @@ class SettingsModel extends Model
     protected $allowedFields = [
         'schoolname',
         'schooladdress',
+        'region',
+        'division',
+        'district',
+        'schoolid',
         'phone',
         'schoolhead',
         'schoolheaddesignation',

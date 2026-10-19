@@ -44,20 +44,22 @@
                 </div>
             </div>
             <div class="card-body pb-20">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered w-100" id="students_table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">LRN</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Contact</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
 
-                <table class="table table-borderless table-hover table-striped" id="students_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">LRN</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Contact</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
             </div>
         </div>
     </div>
@@ -72,7 +74,7 @@
 <link rel="stylesheet" href="/backend/src/plugins/datatables/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="/extra-assets/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.css">
 <link rel="stylesheet" href="/extra-assets/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.structure.min.css">
-<link rel="stylesheet" href="\extra-assets\jquery-ui-1.13.2\jquery-ui-1.13.2\jquery-ui.theme.min.css">
+<link rel="stylesheet" href="/extra-assets/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.theme.min.css">
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>

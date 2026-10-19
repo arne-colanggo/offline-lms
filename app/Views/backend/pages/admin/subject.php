@@ -41,7 +41,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-sm table-borderless table-hover table-striped" id="subject_table">
+                    <table class="table table-striped table-bordered w-100" id="subject_table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>

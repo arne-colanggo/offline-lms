@@ -17,14 +17,81 @@ use SSP;
 class StudentController extends BaseController
 {
     protected $db;
-    protected AuthenticationServices $Auth;
+    protected $Auth;
+
+
     protected $helpers = ['url', 'form', 'CIMail', 'CIFunctions'];
     public function __construct()
     {
+        $this->Auth = AuthenticationServices::class;
         require_once APPPATH . 'ThirdParty/ssp.php';
         $this->db = db_connect();
+
+
     }
 
+    public function index()
+    {
+        $request = \Config\Services::request();
+        $id = AuthenticationServices::id();
+        $st = new StudentModel();
+        $data = [
+            'PageTitle' => 'Dashboard',
+            'classes' => $this->currentEnrolledClasses()
+        ];
+        return view('backend/pages/student/home', $data);
+    }
+
+    public function currentEnrolledClasses()
+    {
+
+        return $this->db->table('students s')
+            ->select('c.id, c.name AS classname, sub.name AS subjectname, sec.name AS sectionname, gl.name AS gradelevel')
+            ->join('class_students cs ', 'cs.studentid = s.id')
+            ->join('classes c', 'c.id = cs.classid')
+            ->join('subjects sub', 'sub.id = c.subjectid')
+            ->join('sections sec', 'sec.id = c.sectionid')
+            ->join('gradelevels gl', 'gl.id = sec.grade_level_id')
+            ->where('s.id', $this->Auth::id())
+            ->where('c.schoolyearid', get_settings()->schoolyear)
+            ->get()->getResultObject();
+    }
+    public function getCurrentClassInformation(int $id)
+    {
+        return $this->db->table('classes c')
+            ->select('c.id, c.name AS classname, sub.name AS subjectname, sec.name AS sectionname, gl.name AS gradelevel')
+            ->join('subjects sub', 'sub.id = c.subjectid')
+            ->join('sections sec', 'sec.id = c.sectionid')
+            ->join('gradelevels gl', 'gl.id = sec.grade_level_id')
+            ->where('c.id', $id)
+            ->where('c.schoolyearid', get_settings()->schoolyear)
+            ->get()->getResultObject();
+    }
+    public function getCurrentClass()
+    {
+        $request = \Config\Services::request();
+        $id = $request->getVar('id');
+        $data = [
+            'pageTitle' => 'Class',
+            'class' => $this->getCurrentClassInformation($id)[0]
+        ];
+
+        return view('backend/pages/student/currentclass', $data);
+    }
+
+
+    public function activeExams()
+    {
+        $request = \Config\Services::request();
+        $id = $request->getVar('id');
+
+        $data = [
+            'pageTitle' => 'Class',
+            'class' => $this->getCurrentClassInformation($id)[0]
+        ];
+
+        return view('backend/pages/student/activeexam', $data);
+    }
     public function student()
     {
         $request = \Config\Services::request();

@@ -57,13 +57,18 @@
 						<span class="micon dw dw-time-management"></span><span class="mtext">Budget of Works</span>
 					</a>
 				</li>
+				<li><a href="<?= route_to('get.questions') ?>" class="dropdown-toggle no-arrow"><span
+							class="micon dw dw-help"></span><span class="mtext">Question Bank</span></a></li>
+				<li><a href="<?= route_to('get.quizzes') ?>" class="dropdown-toggle no-arrow"><span
+							class="micon dw dw-edit-2"></span><span class="mtext">Quizzes</span></a></li>
+
 				<li class="dropdown">
 					<a href="javascript:;" class="dropdown-toggle">
 						<span class="micon dw dw-add-user"></span><span class="mtext">Student</span>
 					</a>
 					<ul class="submenu ">
 						<li>
-							<a href="<?= route_to('student') ?>" class="dropdown-toggle no-arrow">
+							<a href="<?= route_to('students') ?>" class="dropdown-toggle no-arrow">
 								<span class="mtext">Student</span>
 							</a>
 						</li>

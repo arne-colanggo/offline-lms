@@ -24,11 +24,60 @@
 </div>
 <!-- #endheader -->
 
+
+<!-- Stats -->
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-muted small">Total Grade Levels</div>
+                <div class="fs-3 fw-bold">
+                    <?= $stat['total'] ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-muted small">Total Enrolled:
+
+                </div>
+                <div class="fs-3 fw-bold">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <?= $stat['totalenrolled']->total_enrolled ?>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="font-12 text-muted">
+                                <?= $stat['totalenrolled']->total_males ?> Male &middot;
+                                <?= $stat['totalenrolled']->total_females ?> Female
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-muted small">Grade levels with Sections</div>
+                <div class="fs-3 fw-bold">
+                    <?= $stat['gradelevelwithsections']->totalsections ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- # add grade level -->
 <div class="row">
     <div class="col-md-12 mb-4">
-        <div class="card-box">
-            <div class="card-header">
+        <div class="card">
+            <div class="card-header fw-semibold">
                 <div class="clearfix">
                     <div class="pull-left">
                         Grade Level
@@ -40,16 +89,21 @@
                 </div>
             </div>
             <div class="card-body">
-                <table class="table table-sm table-borderless table-hover table-striped" id="grade_level_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered w-100" id="grade_level_table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Enrollment Details</th>
+                                <th scope="col" class="text-center"># Sections</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>

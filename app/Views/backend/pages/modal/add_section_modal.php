@@ -25,6 +25,17 @@
                             placeholder="Enter Section">
                         <span class="text-danger error-text section_name_error"></span>
                     </div>
+                    <div class="form-group">
+                        <label for="">Section Adviser</label>
+                        <select class="form-control" name="adviser" id="adviser">
+                            <option value="">
+                                Select Teacher
+                            </option>
+                            <?php foreach ($advisers as $key => $a): ?>
+                                <option value="<?= $a->id ?>"><?= $a->teacher ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">

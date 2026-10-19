@@ -42,12 +42,17 @@
 
 <body>
 
+	<?php if (get_user()->userdata['role'] === 'admin'): ?>
+		<?php include('inc_admin/header.php') ?>
+		<?php include('inc_admin/right-sidebar.php') ?>
+		<?php include('inc_admin/left-sidebar.php') ?>
 
-	<?php include('inc_admin/header.php') ?>
-	<?php include('inc_admin/right-sidebar.php') ?>
-	<?php include('inc_admin/left-sidebar.php') ?>
+	<?php elseif (get_user()->userdata['role'] === 'teacher'): ?>
+		<?php include('inc_teachers/header.php') ?>
+		<?php include('inc_teachers/right-sidebar.php') ?>
+		<?php include('inc_teachers/left-sidebar.php') ?>
+	<?php endif ?>
 	<div class="mobile-menu-overlay"></div>
-
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">

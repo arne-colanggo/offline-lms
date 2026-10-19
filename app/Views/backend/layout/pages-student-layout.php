@@ -51,7 +51,7 @@
 				<?= $this->renderSection('content') ?>
 			</div>
 
-			<?php include('inc/footer.php') ?>
+			<?php include('inc_student/footer.php') ?>
 		</div>
 	</div>
 
